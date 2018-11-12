@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir.c" path="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/fir.c"/>
+    <originFiles name="fir.h" path="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/fir.h"/>
+  </source>
+  <testbench>
+    <originFiles name="fir_test.c" path="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/fir_test.c"/>
+    <originFiles name="out.gold.dat" path="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/out.gold.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
