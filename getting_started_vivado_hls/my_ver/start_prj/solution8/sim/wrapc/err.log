@@ -1,0 +1,5 @@
+In file included from apatb_fir.cpp:18:0:
+/opt/Xilinx/Vivado/2018.2/include/ap_stream.h:70:2: warning: #warning AP_STREAM macros are deprecated. Please use hls::stream<> from "hls_stream.h" instead. [-Wcpp]
+ #warning AP_STREAM macros are deprecated. Please use hls::stream<> from "hls_stream.h" instead.
+  ^~~~~~~
+make: *** [obj/fir_test.c_pre.c.tb.o] Error 1

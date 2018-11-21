@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[COSIM 212-47]" key="COSIM_TCL_47_1115" tag="" content="Using XSIM for RTL simulation."/>
+	<Message severity="INFO" prefix="[COSIM 212-14]" key="COSIM_TCL_14_1084" tag="" content="Instrumenting C test bench ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;ramdas&apos; on host &apos;ramdas-Precision-Tower-3620&apos; (Linux_x86_64 version 4.15.0-36-generic) on Wed Nov 21 13:05:25 CET 2018"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os Ubuntu 18.04.1 LTS"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/my_ver/start_prj/solution7/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_ramdas/193111542801925789563"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;ramdas&apos; on host &apos;ramdas-Precision-Tower-3620&apos; (Linux_x86_64 version 4.15.0-36-generic) on Wed Nov 21 13:05:29 CET 2018"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os Ubuntu 18.04.1 LTS"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/my_ver/start_prj/solution7/sim/wrapc&apos;"/>
+	<Message severity="ERROR" prefix="[APCC 202-10]" key="APCC_10_1603" tag="" content="clang compile failed: child process exited abnormally"/>
+	<Message severity="ERROR" prefix="[APCC 202-1]" key="APCC_1_1595" tag="" content="ProcessSources failed"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_ramdas/193751542801929199967"/>
+	<Message severity="ERROR" prefix="[APCC 202-1]" key="APCC_1_1612" tag="" content="APCC failed."/>
+	<Message severity="ERROR" prefix="[COSIM 212-317]" key="COSIM_TCL_317_1189" tag="" content="C++ compile error."/>
+	<Message severity="ERROR" prefix="[COSIM 212-321]" key="COSIM_TCL_321_1193" tag="" content="EXE file generate failed."/>
+	<Message severity="ERROR" prefix="[COSIM 212-321]" key="COSIM_TCL_321_1193" tag="" content="EXE file generate failed."/>
+	<Message severity="ERROR" prefix="[COSIM 212-331]" key="COSIM_TCL_331_1203" tag="" content="Aborting co-simulation: C simulation failed, compilation errors."/>
+	<Message severity="INFO" prefix="[HLS 200-112]" key="HLS_112_964" tag="" content="Total elapsed time: 21.63 seconds; peak allocated memory: 61.198 MB."/>
+	<Message severity="INFO" prefix="[Common 17-206]" key="Common 17-206" tag="" content="Exiting vivado_hls at Wed Nov 21 13:05:30 2018..."/>
+</Messages>

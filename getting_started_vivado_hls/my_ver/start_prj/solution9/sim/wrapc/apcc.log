@@ -1,0 +1,22 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Wed Nov 21 13:03:54 CET 2018
+INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/my_ver/start_prj/solution9/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/my_ver/fir_test.c:47:
+In file included from /usr/include/math.h:43:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:75:52: error: unsupported machine mode '__TC__'
+typedef _Complex float __cfloat128 __attribute__ ((__mode__ (__TC__)));
+                                                   ^
+/usr/include/x86_64-linux-gnu/bits/floatn.h:87:9: error: unknown type name '__float128'; did you mean '__cfloat128'?
+typedef __float128 _Float128;
+        ^
+/usr/include/x86_64-linux-gnu/bits/floatn.h:75:24: note: '__cfloat128' declared here
+typedef _Complex float __cfloat128 __attribute__ ((__mode__ (__TC__)));
+                       ^
+2 errors generated.
+ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
+ERROR: [APCC 202-1] ProcessSources failed
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/184901542801834656658
+ERROR: [APCC 202-1] APCC failed.

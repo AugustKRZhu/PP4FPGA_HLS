@@ -1,0 +1,36 @@
+#define N 11
+#include <stdio.h>
+
+
+typedef int coef_t;
+typedef int data_t;
+typedef int acc_t;
+
+void fir(data_t *y, coef_t c[N], data_t x){
+  static data_t shift_reg[N];
+  acc_t acc = 0;
+  data_t data;
+  for (int i = N-1; i >=0; i--){
+    if(i==0){
+      shift_reg[i] = x;
+      data = x;
+    }
+    else{
+      shift_reg[i] = shift_reg[i-1];
+      data = shift_reg[i];
+    }
+    acc += c[i]*data;
+  }
+  *y = acc;
+}
+
+int main(){
+  data_t signal, output;
+  coef_t taps[N] = {0,-10,-9,23,56,63,56,23,-9,-10,0};
+  for(int i = 0; i<=20;i++){
+    signal = i;
+    fir(&output,taps,signal);
+    printf("%i %d %d\n",i, signal, output);
+  }
+  return 0;
+}

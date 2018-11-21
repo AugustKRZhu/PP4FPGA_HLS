@@ -1,0 +1,32 @@
+FPGA design process
+I/O interface core - structural RTL timing constraints
+standard cores
+accelerator cores - constructe for a specific application by a system designer. custom cores designed using HLS.
+
+Integrating design - two design methodologies
+1. HLS generated accelerator core is like any other core, they are combined with I/O interface cores and standard cores to form a design.
+this is called core based design methodology
+
+Platform based design methologies- integrate different algorithms (roles) within interfaces provided by a singple platform or shell. Standard design templates called platforms are available.
+
+Design optimization
+performance characterization
+1. computation time
+2. seconds (to account for different clock domains)
+3. Task -atomic unit of behavior, task latency - time between tast start and finish. Task interval - time between one task start and next starts
+4. data rate - depends on task interval and size of araguments to function
+
+Area throughput tradeoffs
+
+HLS optimizations
+1. loop unrolling
+2. loop pipelining
+3. bitwidth optimization
+4. function inlining
+5. hierarchy
+6. array optimizations
+7. task pipelining
+8. test bench
+9. co simulation
+10. streaming
+11. interfacing

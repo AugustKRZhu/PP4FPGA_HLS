@@ -30,3 +30,63 @@ HLS optimizations
 9. co simulation
 10. streaming
 11. interfacing
+
+Next step - FIR fulters using HLS - read from page 31 to 34
+
+Getting started with vivaod High level synthsis
+https://www.xilinx.com/video/hardware/getting-started-vivado-high-level-synthesis.html
+Complete list of documentation on vivaod hls
+https://www.xilinx.com/support/documentation-navigation/design-hubs/dh0012-vivado-high-level-synthesis-hub.html
+
+
+FIR example
+git clone https://github.com/Xilinx/HLx_Examples.git
+Documenttion on how to run the FIR example - https://github.com/Xilinx/HLx_Examples/tree/master/DSP/fir_example
+work: /home/ramdas/Work/Learning/CPP_Learning/HLx_Examples/DSP/fir_example
+cd /home/ramdas/Work/Learning/CPP_Learning/HLx_Examples/DSP/fir_example
+cp fir.cpp fir.h ./fir_test.cpp /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/
+cp ./run_1_FIR_script.tcl /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/
+cp -prf ./data/ /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/
+
+created new project using
+vivado_hls
+
+Validate C design - simulate the C code 
+Run into error probably because no control on code
+Gettint the right design files
+Copied design files to /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/ug871-design-files
+cleaning up getting started project
+copying fir examples to here ~/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls
+cp ../ug871-design-files/Introduction/lab1/* .
+restarting vivado hls
+Created new project and added fir.c and fir.h files
+added test benches
+ran the c simulation and it works
+
+Next step is to go through the C code and understand how it works
+Also for beginner I should read the vivado design suite tutorial - high level synthesis
+This book has good tutorials and how to get used to the interface then I can learn how to do different optimizations
+Git pushed
+
+Now working on my own version of FIR
+work dir: /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/my_ver
+main should be test bench the other hardware must be functions
+
+
+
+Using TCL interface of Vivado HLS
+work: ~/Work/Learning/CPP_Learning/PP4FPGA_HLS/getting_started_vivado_hls/lab2
+TCL : run_hls.tcl
+Run : vivado_hls -f run_hls.tcl
+Results:
+Synthesis report: project/solution/syn/report
+Simulation report: project/solution/sim/report
+output package: project/solution/impl/ip
+output RTL: project/solution/impl/verilog (vhdl)
+
+Vary clock period for base FIR from 10ns to 1ns in increments of 1ns which clock period provides best performance
+which gives best area
+looking at synthesis report
+Next Step: Understanding the synthesis report - https://forums.xilinx.com/t5/Vivado-High-Level-Synthesis-HLS/HLS-Synthesis-Report-Explanation-on-Performance-Estimates-and/td-p/781394
+
+
