@@ -1,0 +1,136 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2018.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Wed Nov 28 15:34:54 CET 2018
+INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling'
+INFO: [HLS 200-10] Opening and resetting project '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling/start_prj'.
+INFO: [HLS 200-10] Adding design file 'fir.c' to the project
+INFO: [HLS 200-10] Adding design file 'fir.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'fir_test.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'out.gold.dat' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling/start_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../fir_test.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Wed Nov 28 15:34:55 CET 2018
+INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling/start_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/150521543415695698461
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../fir.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Wed Nov 28 15:34:59 CET 2018
+INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling/start_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/151171543415700001420
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Comparing against output data 
+*******************************************
+PASS: The output matches the golden output!
+*******************************************
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file 'fir.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 375.664 ; gain = 0.109 ; free physical = 4973 ; free virtual = 17448
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 375.664 ; gain = 0.109 ; free physical = 4973 ; free virtual = 17448
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 375.664 ; gain = 0.109 ; free physical = 4972 ; free virtual = 17447
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 375.664 ; gain = 0.109 ; free physical = 4972 ; free virtual = 17447
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 503.555 ; gain = 128.000 ; free physical = 4954 ; free virtual = 17429
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 503.555 ; gain = 128.000 ; free physical = 4959 ; free virtual = 17436
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.72 seconds; current allocated memory: 60.920 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 61.158 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/c' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 61.518 MB.
+INFO: [RTMG 210-278] Implementing memory 'fir_shift_reg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 503.555 ; gain = 128.000 ; free physical = 4952 ; free virtual = 17430
+INFO: [SYSC 207-301] Generating SystemC RTL for fir.
+INFO: [VHDL 208-304] Generating VHDL RTL for fir.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/opt/Xilinx/Vivado/2018.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_fir.cpp
+   Compiling (apcc) fir.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Wed Nov 28 15:35:11 CET 2018
+INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling/start_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/152891543415711410599
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) fir_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Wed Nov 28 15:35:14 CET 2018
+INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling/start_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling/fir_test.c:47:
+In file included from /usr/include/math.h:43:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:75:52: error: unsupported machine mode '__TC__'
+typedef _Complex float __cfloat128 __attribute__ ((__mode__ (__TC__)));
+                                                   ^
+/usr/include/x86_64-linux-gnu/bits/floatn.h:87:9: error: unknown type name '__float128'; did you mean '__cfloat128'?
+typedef __float128 _Float128;
+        ^
+/usr/include/x86_64-linux-gnu/bits/floatn.h:75:24: note: '__cfloat128' declared here
+typedef _Complex float __cfloat128 __attribute__ ((__mode__ (__TC__)));
+                       ^
+2 errors generated.
+ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
+ERROR: [APCC 202-1] ProcessSources failed
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/153511543415714813859
+ERROR: [APCC 202-1] APCC failed.
+cosim.tv.mk:68: recipe for target 'obj/fir_test.c_pre.c.tb.o' failed
+In file included from apatb_fir.cpp:18:0:
+/opt/Xilinx/Vivado/2018.2/include/ap_stream.h:70:2: warning: #warning AP_STREAM macros are deprecated. Please use hls::stream<> from "hls_stream.h" instead. [-Wcpp]
+ #warning AP_STREAM macros are deprecated. Please use hls::stream<> from "hls_stream.h" instead.
+  ^~~~~~~
+make: *** [obj/fir_test.c_pre.c.tb.o] Error 1
+ERROR: [COSIM 212-317] C++ compile error.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
+command 'ap_source' returned error code
+    while executing
+"source [lindex $::argv 1] "
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 { source [lindex $::argv 1] } "
+
+INFO: [HLS 200-112] Total elapsed time: 21.32 seconds; peak allocated memory: 61.518 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Wed Nov 28 15:35:15 2018...

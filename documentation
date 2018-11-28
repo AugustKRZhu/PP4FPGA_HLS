@@ -90,3 +90,57 @@ looking at synthesis report
 Next Step: Understanding the synthesis report - https://forums.xilinx.com/t5/Vivado-High-Level-Synthesis-HLS/HLS-Synthesis-Report-Explanation-on-Performance-Estimates-and/td-p/781394
 
 
+Code hoisting
+in FIR code the if statement resolves only in last iteration and it has to be taken out of the loop
+Work: ~/Work/Learning/CPP_Learning/PP4FPGA_HLS/code_hoisting
+cp ../getting_started_vivado_hls/lab2/* .
+Comparing with previous design
+Edited fir.c to hoist out code comments in file
+vivado_hls -f ./run_hls.tcl
+Report: less ./start_prj/solution1/syn/report/fir_csynth.rpt
+Estimated time is 8.470 ns
+Latency 44
+Compare with less ../getting_started_vivado_hls/lab2/start_prj/solution1/syn/report/fir_csynth.rpt
+Estimated time is 8.470
+Latency 56 clock cycles
+This design works better
+
+Loop fission
+* Two fundamental operations within forloop 
+* shifts data through shift_reg array
+* multiply accumulate ops to calc output sample
+* loop fission takes these two operations and implements each of them in their own loop. 
+* it allows us to perform optimizations seprately on each loop. 
+* usage of loop fission depends on application, some applications loop merging may offer better results
+Identify operations that happen in a loop and split them into separate loops to optimize them individually
+/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_fission
+Latency is 66 which is worse than what we began with 
+From resource utilization point of view - Number of FFs increase and Number of LUTs decrease
+There are two loops in report now
+
+Loop Unrolling
+/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling
+* HLS synthesizes for loops in sequential manner
+* tool creates datapath that implements one execution of statements in the body of the loop
+* the data path executes sequentially for each iteration of the loop. 
+* creates area efficient architecture but limits the ability to exploit parallelism. 
+*  loop unrolling replicates body of loop some number of times (factor) and reduces number of iterations of the loop by same factor.
+Run : vivado_hls -f run_hls.tcl
+Result: less ./start_prj/solution1/syn/report/fir_csynth.rpt
+The latency has decreased from 66 to 56
+Resrouce utilization: 2,3,163,287 (BRAM, DSP, FF, LUT)
+This has increased from reference: loop fission 0,3,217,213
+
+Pragmas
+to be able to read and write multiple values at same time from shift_reg, each value must be stored in separate register
+This can be specified using pragmas
+#pragma HLS array_partition variable = shift_reg complete
+
+Automatic loop unrolling
+using unroll directive
+#pragma HLS unroll factor=2 in the body of the code.
+work: /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling_unroll_directive
+Latency 56
+Resource 2,3,153,250
+adding array partition pragma
+Next step: Conitnue loop unrolling part in the book
