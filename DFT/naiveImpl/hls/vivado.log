@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri May 17 16:18:59 2019
+# Process ID: 24200
+# Current directory: /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/hls
+# Command line: vivado
+# Log file: /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/hls/vivado.log
+# Journal file: /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/hls/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/script.tcl
+# open_project hls
+ERROR: [Coretcl 2-155] Invalid project file name 'hls'. File must have a valid Vivado project extension (.xpr/.ppr).
+source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/script.tcl
+# open_project -reset dft_hls.xpr
+ERROR: [Common 17-170] Unknown option '-reset', please type 'open_project -help' for usage info.
+source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/script.tcl
+# open_project dft_hls.xpr
+ERROR: [Coretcl 2-27] Can't find specified project.
+create_project dft_hls /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/dft_hls -part xc7vx485tffg1157-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 6180.023 ; gain = 37.562 ; free physical = 20338 ; free virtual = 28963
+add_files -norecurse {/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/out.gold.dat /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/dft.cpp /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/dft.h /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/dft_test.cpp}
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri May 17 16:27:58 2019...

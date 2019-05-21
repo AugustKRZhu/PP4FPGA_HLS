@@ -1,0 +1,3 @@
+<annotationInfo>
+<item  id="10" filename="multiple_bw.c" linenumber="2" name="a_assign" contextFuncName="mult" moduleName="mult" rtlName="mult_mul_64s_64s_bkb_U1" latency="4" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/bit_width_optimization"><\/item>
+</annotationInfo>

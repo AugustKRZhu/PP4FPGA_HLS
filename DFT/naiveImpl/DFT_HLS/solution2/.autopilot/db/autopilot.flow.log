@@ -1,0 +1,841 @@
+INFO-FLOW: Workspace /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2 opened at Fri May 17 16:35:54 CEST 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7_fpv6 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7_hp.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xa7a100tcsg324-1i 
+Execute       add_library xilinx/aartix7/aartix7:xa7a100t:csg324:-1i 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a100t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/aartix7/aartix7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xa7a100tcsg324-1i'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.13 sec.
+Execute   set_part xa7a100tcsg324-1i -tool vivado 
+Execute     add_library xilinx/aartix7/aartix7:xa7a100t:csg324:-1i 
+Execute       get_default_platform 
+Execute       license_isbetapart xa7a100t 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/aartix7/aartix7_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling dft.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted dft.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "dft.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E dft.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pp.0.cpp
+Command       clang done; 0.9 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pp.0.cpp"  -o "/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pp.0.cpp -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/useless.bc
+Command       clang done; 0.91 sec.
+INFO-FLOW: GCC PP time: 1 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pp.0.cpp std=gnu++98 -directive=/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/.systemc_flag -quiet -fix-errors /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pp.0.cpp std=gnu++98 -directive=/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/solution2.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/solution2.json -quiet -fix-errors /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/xilinx-dataflow-lawyer.dft.pp.0.cpp.diag.yml /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/xilinx-dataflow-lawyer.dft.pp.0.cpp.out.log 2> /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/xilinx-dataflow-lawyer.dft.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: tidy-3.1 time 0 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pragma.2.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pragma.2.cpp
+Command       clang done; 0.9 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.bc
+Command       clang done; 0.9 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.g.bc -hls-opt -except-internalize dft -L/opt/Xilinx/Vivado/2018.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.g 
+Command       llvm-ld done; 1.23 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 375.695 ; gain = 0.141 ; free physical = 19492 ; free virtual = 28434
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 375.695 ; gain = 0.141 ; free physical = 19492 ; free virtual = 28434
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.pp.bc -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.pp.0.bc -f 
+Command         transform done; 0.31 sec.
+Execute         llvm-ld /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/Xilinx/Vivado/2018.2/lnx64/lib -lfloatconversion -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.g.0 
+Command         llvm-ld done; 1.15 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top dft -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.g.0.bc -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<124, 0, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:529).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<63, 0, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:531).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<63, 0, false, (ap_q_mode)0, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<63, 0, false, (ap_q_mode)0, (ap_o_mode)0, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>.1' ().
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<63, 1, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'scaled_fixed2ieee<63, 1>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:442).
+Command         transform done; 0.84 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 575.727 ; gain = 200.172 ; free physical = 19347 ; free virtual = 28306
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.g.1.bc -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:466) automatically.
+INFO: [XFORM 203-602] Inlining function 'table_lookup_4oPi_hotbm<52, 61>' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:492) automatically.
+INFO: [XFORM 203-602] Inlining function 'clz<61, 124, 0>' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:520) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::data' into 'fp_struct<double>::to_double' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_utils.h:475) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_double' into 'fp_struct<double>::to_ieee' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_utils.h:489) automatically.
+INFO: [XFORM 203-602] Inlining function 'clz' into 'scaled_fixed2ieee<63, 1>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:434) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::set_mantissa' into 'scaled_fixed2ieee<63, 1>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:462) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'scaled_fixed2ieee<63, 1>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:465) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::value_list<double>::sin_or_cos_approximation<63, 63>' into 'hotbm_::sin_or_cos<double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:276) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'hotbm_::sin_or_cos<double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:313) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::cos' into 'cos' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:12) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::sin' into 'sin' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:7) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'dft' (dft.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'dft' (dft.cpp:21) automatically.
+Command         transform done; 0.26 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.g.2.prechk.bc -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] /wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:424: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+Command         transform done; 0.22 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 575.727 ; gain = 200.172 ; free physical = 19304 ; free virtual = 28272
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.g.1.bc to /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.o.1.bc -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-102] Automatically partitioning small array 'out_bits.V' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:421) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:432) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'swap_table.1'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'swap_table'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'neg_sin_table'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'neg_cos_table'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'out_bits.V' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:421) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:432) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:466) automatically.
+INFO: [XFORM 203-602] Inlining function 'table_lookup_4oPi_hotbm<52, 61>' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:492) automatically.
+INFO: [XFORM 203-602] Inlining function 'clz<61, 124, 0>' into 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:520) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::data' into 'fp_struct<double>::to_double' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_utils.h:475) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_double' into 'fp_struct<double>::to_ieee' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_utils.h:489) automatically.
+INFO: [XFORM 203-602] Inlining function 'clz' into 'scaled_fixed2ieee<63, 1>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:434) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::set_mantissa' into 'scaled_fixed2ieee<63, 1>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:462) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'scaled_fixed2ieee<63, 1>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:465) automatically.
+INFO: [XFORM 203-602] Inlining function 'range_redux_payne_hanek_hotbm<61, double, 63, 63>' into 'hotbm_::sin_or_cos<double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:265) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::value_list<double>::sin_or_cos_approximation<63, 63>' into 'hotbm_::sin_or_cos<double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:276) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'hotbm_::sin_or_cos<double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:313) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::cos' into 'cos' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:12) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::sin' into 'sin' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:7) automatically.
+INFO: [XFORM 203-602] Inlining function 'cos' into 'dft' (dft.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'sin' into 'dft' (dft.cpp:21) automatically.
+Command         transform done; 0.47 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.o.1.tmp.bc -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:451:51) to (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:466:1) in function 'scaled_fixed2ieee<63, 1>'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:235:18) to (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:313:12) in function 'hotbm_::sin_or_cos<double>'... converting 11 basic blocks.
+Command         transform done; 0.3 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 701.434 ; gain = 325.879 ; free physical = 19198 ; free virtual = 28178
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.o.2.bc -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'scaled_fixed2ieee<63, 1>' to 'scaled_fixed2ieee' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_float_utils.h:109:37)
+WARNING: [XFORM 203-631] Renaming function 'hotbm_::sin_or_cos<double>' to 'sin_or_cos<double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:235)
+Command         transform done; 0.36 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 713.758 ; gain = 338.203 ; free physical = 19143 ; free virtual = 28125
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 3.91 sec.
+Command     elaborate done; 8.91 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+Execute       ap_set_top_model dft 
+WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos<double>' to 'sin_or_cos_double_s'.
+Execute       get_model_list dft -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model dft 
+Execute       preproc_iomode -model sin_or_cos<double> 
+Execute       preproc_iomode -model scaled_fixed2ieee 
+Execute       get_model_list dft -filter all-wo-channel 
+INFO-FLOW: Model list for configure: scaled_fixed2ieee sin_or_cos<double> dft
+INFO-FLOW: Configuring Module : scaled_fixed2ieee ...
+Execute       set_default_model scaled_fixed2ieee 
+Execute       apply_spec_resource_limit scaled_fixed2ieee 
+INFO-FLOW: Configuring Module : sin_or_cos<double> ...
+Execute       set_default_model sin_or_cos<double> 
+Execute       apply_spec_resource_limit sin_or_cos<double> 
+INFO-FLOW: Configuring Module : dft ...
+Execute       set_default_model dft 
+Execute       apply_spec_resource_limit dft 
+INFO-FLOW: Model list for preprocess: scaled_fixed2ieee sin_or_cos<double> dft
+INFO-FLOW: Preprocessing Module: scaled_fixed2ieee ...
+Execute       set_default_model scaled_fixed2ieee 
+Execute       cdfg_preprocess -model scaled_fixed2ieee 
+Execute       rtl_gen_preprocess scaled_fixed2ieee 
+INFO-FLOW: Preprocessing Module: sin_or_cos<double> ...
+Execute       set_default_model sin_or_cos<double> 
+Execute       cdfg_preprocess -model sin_or_cos<double> 
+Execute       rtl_gen_preprocess sin_or_cos<double> 
+INFO-FLOW: Preprocessing Module: dft ...
+Execute       set_default_model dft 
+Execute       cdfg_preprocess -model dft 
+Execute       rtl_gen_preprocess dft 
+INFO-FLOW: Model list for synthesis: scaled_fixed2ieee sin_or_cos<double> dft
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'scaled_fixed2ieee' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model scaled_fixed2ieee 
+Execute       schedule -model scaled_fixed2ieee 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 9.29 seconds; current allocated memory: 310.404 MB.
+Execute       report -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+Execute       db_write -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee.sched.adb -f 
+INFO-FLOW: Finish scheduling scaled_fixed2ieee.
+Execute       set_default_model scaled_fixed2ieee 
+Execute       bind -model scaled_fixed2ieee 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=scaled_fixed2ieee
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 310.874 MB.
+Execute       report -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee.bind.adb -f 
+INFO-FLOW: Finish binding scaled_fixed2ieee.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sin_or_cos_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model sin_or_cos<double> 
+Execute       schedule -model sin_or_cos<double> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.27 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 311.886 MB.
+Execute       report -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s.sched.adb -f 
+INFO-FLOW: Finish scheduling sin_or_cos<double>.
+Execute       set_default_model sin_or_cos<double> 
+Execute       bind -model sin_or_cos<double> 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=sin_or_cos<double>
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 312.591 MB.
+Execute       report -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s.verbose.bind.rpt -verbose -f 
+Command       report done; 0.14 sec.
+Execute       db_write -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s.bind.adb -f 
+INFO-FLOW: Finish binding sin_or_cos<double>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dft 
+Execute       schedule -model dft 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 313.466 MB.
+Execute       report -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.sched.adb -f 
+INFO-FLOW: Finish scheduling dft.
+Execute       set_default_model dft 
+Execute       bind -model dft 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=dft
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 313.917 MB.
+Execute       report -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.verbose.bind.rpt -verbose -f 
+Command       report done; 0.28 sec.
+Execute       db_write -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.bind.adb -f 
+INFO-FLOW: Finish binding dft.
+Execute       get_model_list dft -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess scaled_fixed2ieee 
+Execute       rtl_gen_preprocess sin_or_cos<double> 
+Execute       rtl_gen_preprocess dft 
+INFO-FLOW: Model list for RTL generation: scaled_fixed2ieee sin_or_cos<double> dft
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'scaled_fixed2ieee' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model scaled_fixed2ieee -vendor xilinx -mg_file /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'dft_mux_42_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'scaled_fixed2ieee'.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 314.873 MB.
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.rtl_wrap.cfg.tcl 
+Execute       gen_rtl scaled_fixed2ieee -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/systemc/scaled_fixed2ieee -synmodules scaled_fixed2ieee sin_or_cos<double> dft 
+Execute       gen_rtl scaled_fixed2ieee -style xilinx -f -lang vhdl -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/vhdl/scaled_fixed2ieee 
+Execute       gen_rtl scaled_fixed2ieee -style xilinx -f -lang vlog -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/verilog/scaled_fixed2ieee 
+Execute       gen_tb_info scaled_fixed2ieee -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee -p /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db 
+Execute       report -model scaled_fixed2ieee -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/report/scaled_fixed2ieee_csynth.rpt -f 
+Execute       report -model scaled_fixed2ieee -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/report/scaled_fixed2ieee_csynth.xml -f -x 
+Execute       report -model scaled_fixed2ieee -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee.verbose.rpt -verbose -f 
+Execute       db_write -model scaled_fixed2ieee -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sin_or_cos_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model sin_or_cos<double> -vendor xilinx -mg_file /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'sin_or_cos_double_s_ref_4oPi_table_256_V' to 'sin_or_cos_doublebkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sin_or_cos_double_s_fourth_order_double_4' to 'sin_or_cos_doublecud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sin_or_cos_double_s_fourth_order_double_5' to 'sin_or_cos_doubledEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sin_or_cos_double_s_fourth_order_double_6' to 'sin_or_cos_doubleeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sin_or_cos_double_s_fourth_order_double_7' to 'sin_or_cos_doublefYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sin_or_cos_double_s_fourth_order_double_s' to 'sin_or_cos_doubleg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dft_mul_170ns_53ns_223_5_1' to 'dft_mul_170ns_53nhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dft_mul_49ns_49ns_98_2_1' to 'dft_mul_49ns_49nsibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dft_mul_56ns_52s_108_2_1' to 'dft_mul_56ns_52s_jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dft_mul_49ns_44s_93_2_1' to 'dft_mul_49ns_44s_kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dft_mul_42ns_33ns_75_2_1' to 'dft_mul_42ns_33nslbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dft_mul_64s_63ns_126_5_1' to 'dft_mul_64s_63ns_mb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dft_mul_170ns_53nhbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dft_mul_42ns_33nslbW': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dft_mul_49ns_44s_kbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dft_mul_49ns_49nsibs': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dft_mul_56ns_52s_jbC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dft_mul_64s_63ns_mb6': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dft_mux_164_1_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dft_mux_83_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sin_or_cos_double_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 318.241 MB.
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.rtl_wrap.cfg.tcl 
+Execute       gen_rtl sin_or_cos<double> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/systemc/sin_or_cos_double_s -synmodules scaled_fixed2ieee sin_or_cos<double> dft 
+Execute       gen_rtl sin_or_cos<double> -style xilinx -f -lang vhdl -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/vhdl/sin_or_cos_double_s 
+Execute       gen_rtl sin_or_cos<double> -style xilinx -f -lang vlog -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/verilog/sin_or_cos_double_s 
+Execute       gen_tb_info sin_or_cos<double> -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s -p /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db 
+Execute       report -model sin_or_cos<double> -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/report/sin_or_cos_double_s_csynth.rpt -f 
+Execute       report -model sin_or_cos<double> -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/report/sin_or_cos_double_s_csynth.xml -f -x 
+Execute       report -model sin_or_cos<double> -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s.verbose.rpt -verbose -f 
+Command       report done; 0.17 sec.
+Execute       db_write -model sin_or_cos<double> -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model dft -vendor xilinx -mg_file /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/sample_real' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/sample_imag' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dft' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'dft_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'dft_faddfsub_32nsncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dft_fmul_32ns_32ns_32_4_max_dsp_1' to 'dft_fmul_32ns_32nocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dft_uitofp_32ns_32_5_1' to 'dft_uitofp_32ns_3pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dft_fptrunc_64ns_32_1_1' to 'dft_fptrunc_64ns_qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dft_fpext_32ns_64_1_1' to 'dft_fpext_32ns_64rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dft_dmul_64ns_64ns_64_6_max_dsp_1' to 'dft_dmul_64ns_64nsc4' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dft_dmul_64ns_64nsc4': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dft_faddfsub_32nsncg': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dft_fmul_32ns_32nocq': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dft_fpext_32ns_64rcU': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dft_fptrunc_64ns_qcK': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dft_uitofp_32ns_3pcA': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dft'.
+INFO: [HLS 200-111]  Elapsed time: 0.4 seconds; current allocated memory: 321.879 MB.
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dft -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/systemc/dft -synmodules scaled_fixed2ieee sin_or_cos<double> dft 
+Execute       gen_rtl dft -istop -style xilinx -f -lang vhdl -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/vhdl/dft 
+Execute       gen_rtl dft -istop -style xilinx -f -lang vlog -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/verilog/dft 
+Execute       export_constraint_db -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.constraint.tcl -f -tool general 
+Execute       report -model dft -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.design.xml -verbose -f -dv 
+Execute       report -model dft -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info dft -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft -p /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db 
+Execute       report -model dft -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/report/dft_csynth.rpt -f 
+Execute       report -model dft -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/syn/report/dft_csynth.xml -f -x 
+Execute       report -model dft -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.verbose.rpt -verbose -f 
+Command       report done; 0.3 sec.
+Execute       db_write -model dft -o /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.adb -f 
+Execute       sc_get_clocks dft 
+Execute       sc_get_portdomain dft 
+INFO-FLOW: Model list for RTL component generation: scaled_fixed2ieee sin_or_cos<double> dft
+INFO-FLOW: Handling components in module [scaled_fixed2ieee] ... 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee.compgen.tcl 
+INFO-FLOW: Found component dft_mux_42_32_1_1.
+INFO-FLOW: Append model dft_mux_42_32_1_1
+INFO-FLOW: Handling components in module [sin_or_cos_double_s] ... 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
+INFO-FLOW: Found component dft_mul_170ns_53nhbi.
+INFO-FLOW: Append model dft_mul_170ns_53nhbi
+INFO-FLOW: Found component dft_mux_83_1_1_1.
+INFO-FLOW: Append model dft_mux_83_1_1_1
+INFO-FLOW: Found component dft_mul_49ns_49nsibs.
+INFO-FLOW: Append model dft_mul_49ns_49nsibs
+INFO-FLOW: Found component dft_mul_56ns_52s_jbC.
+INFO-FLOW: Append model dft_mul_56ns_52s_jbC
+INFO-FLOW: Found component dft_mul_49ns_44s_kbM.
+INFO-FLOW: Append model dft_mul_49ns_44s_kbM
+INFO-FLOW: Found component dft_mul_42ns_33nslbW.
+INFO-FLOW: Append model dft_mul_42ns_33nslbW
+INFO-FLOW: Found component dft_mul_64s_63ns_mb6.
+INFO-FLOW: Append model dft_mul_64s_63ns_mb6
+INFO-FLOW: Found component dft_mux_164_1_1_1.
+INFO-FLOW: Append model dft_mux_164_1_1_1
+INFO-FLOW: Found component dft_mux_164_1_1_1.
+INFO-FLOW: Append model dft_mux_164_1_1_1
+INFO-FLOW: Found component sin_or_cos_doublebkb.
+INFO-FLOW: Append model sin_or_cos_doublebkb
+INFO-FLOW: Found component sin_or_cos_doublecud.
+INFO-FLOW: Append model sin_or_cos_doublecud
+INFO-FLOW: Found component sin_or_cos_doubledEe.
+INFO-FLOW: Append model sin_or_cos_doubledEe
+INFO-FLOW: Found component sin_or_cos_doubleeOg.
+INFO-FLOW: Append model sin_or_cos_doubleeOg
+INFO-FLOW: Found component sin_or_cos_doublefYi.
+INFO-FLOW: Append model sin_or_cos_doublefYi
+INFO-FLOW: Found component sin_or_cos_doubleg8j.
+INFO-FLOW: Append model sin_or_cos_doubleg8j
+INFO-FLOW: Handling components in module [dft] ... 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.compgen.tcl 
+INFO-FLOW: Found component dft_faddfsub_32nsncg.
+INFO-FLOW: Append model dft_faddfsub_32nsncg
+INFO-FLOW: Found component dft_fmul_32ns_32nocq.
+INFO-FLOW: Append model dft_fmul_32ns_32nocq
+INFO-FLOW: Found component dft_uitofp_32ns_3pcA.
+INFO-FLOW: Append model dft_uitofp_32ns_3pcA
+INFO-FLOW: Found component dft_fptrunc_64ns_qcK.
+INFO-FLOW: Append model dft_fptrunc_64ns_qcK
+INFO-FLOW: Found component dft_fpext_32ns_64rcU.
+INFO-FLOW: Append model dft_fpext_32ns_64rcU
+INFO-FLOW: Found component dft_dmul_64ns_64nsc4.
+INFO-FLOW: Append model dft_dmul_64ns_64nsc4
+INFO-FLOW: Found component dft_temp_real.
+INFO-FLOW: Append model dft_temp_real
+INFO-FLOW: Append model scaled_fixed2ieee
+INFO-FLOW: Append model sin_or_cos_double_s
+INFO-FLOW: Append model dft
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: dft_mux_42_32_1_1 dft_mul_170ns_53nhbi dft_mux_83_1_1_1 dft_mul_49ns_49nsibs dft_mul_56ns_52s_jbC dft_mul_49ns_44s_kbM dft_mul_42ns_33nslbW dft_mul_64s_63ns_mb6 dft_mux_164_1_1_1 dft_mux_164_1_1_1 sin_or_cos_doublebkb sin_or_cos_doublecud sin_or_cos_doubledEe sin_or_cos_doubleeOg sin_or_cos_doublefYi sin_or_cos_doubleg8j dft_faddfsub_32nsncg dft_fmul_32ns_32nocq dft_uitofp_32ns_3pcA dft_fptrunc_64ns_qcK dft_fpext_32ns_64rcU dft_dmul_64ns_64nsc4 dft_temp_real scaled_fixed2ieee sin_or_cos_double_s dft
+INFO-FLOW: To file: write model dft_mux_42_32_1_1
+INFO-FLOW: To file: write model dft_mul_170ns_53nhbi
+INFO-FLOW: To file: write model dft_mux_83_1_1_1
+INFO-FLOW: To file: write model dft_mul_49ns_49nsibs
+INFO-FLOW: To file: write model dft_mul_56ns_52s_jbC
+INFO-FLOW: To file: write model dft_mul_49ns_44s_kbM
+INFO-FLOW: To file: write model dft_mul_42ns_33nslbW
+INFO-FLOW: To file: write model dft_mul_64s_63ns_mb6
+INFO-FLOW: To file: write model dft_mux_164_1_1_1
+INFO-FLOW: To file: write model dft_mux_164_1_1_1
+INFO-FLOW: To file: write model sin_or_cos_doublebkb
+INFO-FLOW: To file: write model sin_or_cos_doublecud
+INFO-FLOW: To file: write model sin_or_cos_doubledEe
+INFO-FLOW: To file: write model sin_or_cos_doubleeOg
+INFO-FLOW: To file: write model sin_or_cos_doublefYi
+INFO-FLOW: To file: write model sin_or_cos_doubleg8j
+INFO-FLOW: To file: write model dft_faddfsub_32nsncg
+INFO-FLOW: To file: write model dft_fmul_32ns_32nocq
+INFO-FLOW: To file: write model dft_uitofp_32ns_3pcA
+INFO-FLOW: To file: write model dft_fptrunc_64ns_qcK
+INFO-FLOW: To file: write model dft_fpext_32ns_64rcU
+INFO-FLOW: To file: write model dft_dmul_64ns_64nsc4
+INFO-FLOW: To file: write model dft_temp_real
+INFO-FLOW: To file: write model scaled_fixed2ieee
+INFO-FLOW: To file: write model sin_or_cos_double_s
+INFO-FLOW: To file: write model dft
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_config_sdx -target 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee.compgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
+INFO: [RTMG 210-282] Generating pipelined core: 'dft_mul_170ns_53nhbi_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'dft_mul_49ns_49nsibs_MulnS_1'
+INFO: [RTMG 210-282] Generating pipelined core: 'dft_mul_56ns_52s_jbC_MulnS_2'
+INFO: [RTMG 210-282] Generating pipelined core: 'dft_mul_49ns_44s_kbM_MulnS_3'
+INFO: [RTMG 210-282] Generating pipelined core: 'dft_mul_42ns_33nslbW_MulnS_4'
+INFO: [RTMG 210-282] Generating pipelined core: 'dft_mul_64s_63ns_mb6_MulnS_5'
+INFO: [RTMG 210-279] Implementing memory 'sin_or_cos_doublebkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sin_or_cos_doublecud_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sin_or_cos_doubledEe_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sin_or_cos_doubleeOg_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sin_or_cos_doublefYi_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sin_or_cos_doubleg8j_rom' using distributed ROMs.
+Command       ap_source done; 0.14 sec.
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'dft_temp_real_ram (RAM)' using block RAMs.
+Execute       get_config_sdx -target 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.rtl_wrap.cfg.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.rtl_wrap.cfg.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.rtl_wrap.cfg.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee.compgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.compgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee.compgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.compgen.tcl 
+Execute         source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute         source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/scaled_fixed2ieee.compgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.compgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.constraint.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.constraint.tcl 
+Execute       sc_get_clocks dft 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/impl/misc/dft_ap_dmul_4_max_dsp_64_ip.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/impl/misc/dft_ap_faddfsub_3_full_dsp_32_ip.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/impl/misc/dft_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/impl/misc/dft_ap_fpext_0_no_dsp_32_ip.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/impl/misc/dft_ap_fptrunc_0_no_dsp_64_ip.tcl 
+Execute       source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/impl/misc/dft_ap_uitofp_3_no_dsp_32_ip.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 777.758 ; gain = 402.203 ; free physical = 19122 ; free virtual = 28108
+INFO: [SYSC 207-301] Generating SystemC RTL for dft.
+INFO: [VHDL 208-304] Generating VHDL RTL for dft.
+INFO: [VLOG 209-307] Generating Verilog RTL for dft.
+Command     autosyn done; 3.08 sec.
+Command   csynth_design done; 11.99 sec.
+Command ap_source done; 12.15 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2 opened at Fri May 17 16:49:26 CEST 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7_fpv6 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7_hp.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xa7a100tcsg324-1i 
+Execute       add_library xilinx/aartix7/aartix7:xa7a100t:csg324:-1i 
+Execute         get_default_platform 
+Execute         license_isbetapart xa7a100t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/aartix7/aartix7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xa7a100tcsg324-1i'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.13 sec.
+Execute   cosim_design 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/aartix7/aartix7_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.rtl_wrap.cfg.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     is_encrypted /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/out.gold.dat 
+Execute     is_encrypted /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/dft_test.cpp 
+Execute     is_encrypted /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/dft.h 
+Execute     is_encrypted /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/dft.cpp 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     get_default_platform 
+INFO-FLOW: TB processing: /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/dft_test.cpp /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/./sim/autowrap/testbench/dft_test.cpp_pre.cpp
+INFO-FLOW: Marker-Pragma convertor: /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/./sim/autowrap/testbench/dft_test.cpp_pre.cpp /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/./sim/autowrap/testbench/dft_test.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: Marker-Pragma convertor: ./sim/autowrap/testbench/dft_test.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/dft_test.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute     get_default_platform 
+INFO-FLOW: TB processing: /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/dft.cpp /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/./sim/autowrap/testbench/dft.cpp_pre.cpp
+INFO-FLOW: Marker-Pragma convertor: /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/./sim/autowrap/testbench/dft.cpp_pre.cpp /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/./sim/autowrap/testbench/dft.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: Marker-Pragma convertor: ./sim/autowrap/testbench/dft.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/dft.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/./sim/autowrap/testbench/tb.status.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/global.setting.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.rtl_wrap.cfg.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.rtl_wrap.cfg.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.rtl_wrap.cfg.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     get_default_platform 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command     ap_source done; 0.21 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+Execute     get_default_platform 
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source /home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/DFT_HLS/solution2/.autopilot/db/dft.tbgen.tcl 
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source .sim.status.tcl 

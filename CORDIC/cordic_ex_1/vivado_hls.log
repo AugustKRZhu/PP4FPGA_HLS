@@ -1,0 +1,61 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2018.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Tue Dec 04 15:05:52 CET 2018
+INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/CORDIC/cordic_ex_1'
+INFO: [HLS 200-10] Opening and resetting project '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/CORDIC/cordic_ex_1/start_prj'.
+INFO: [HLS 200-10] Adding design file 'cordic.cc' to the project
+INFO: [HLS 200-10] Adding design file 'cordic.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'cordic_test.cc' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/CORDIC/cordic_ex_1/start_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../cordic_test.cc in debug mode
+   Compiling ../../../../cordic.cc in debug mode
+   Generating csim.exe
+Hello
+0: 0.261602 0.785398
+1: -0.202046 0.463648
+2: 0.0429329 0.244979
+3: -0.0814221 0.124355
+4: -0.0190033 0.0624188
+5: 0.0122366 0.0312398
+6: -0.00338715 0.0156237
+7: 0.00442519 0.00781234
+8: 0.000518959 0.00390623
+9: -0.00143416 0.00195312
+10: -0.000457602 0.000976562
+11: 3.06797e-05 0.000488281
+12: -0.000213461 0.000244141
+13: -9.13907e-05 0.00012207
+14: -3.03555e-05 6.10352e-05
+15: 1.62079e-07 3.05176e-05
+16: -1.50967e-05 1.52588e-05
+17: -7.46732e-06 7.62939e-06
+18: -3.65262e-06 3.8147e-06
+19: -1.74527e-06 1.90735e-06
+20: -7.91595e-07 9.53674e-07
+21: -3.14758e-07 4.76837e-07
+22: -7.63393e-08 2.38419e-07
+23: 4.28699e-08 1.19209e-07
+24: -1.67347e-08 5.96046e-08
+25: 1.30676e-08 2.98023e-08
+26: -1.83354e-09 1.49012e-08
+27: 5.61704e-09 7.45058e-09
+28: 1.89175e-09 3.72529e-09
+29: 2.91038e-11 1.86265e-09
+30: -9.02219e-10 9.31323e-10
+31: -4.36557e-10 4.65661e-10
+0.500251 0.866065
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [Common 17-206] Exiting vivado_hls at Tue Dec  4 15:05:53 2018...

@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename c \
     op interface \
-    ports { c_address0 { O 4 vector } c_ce0 { O 1 bit } c_q0 { I 32 vector } } \
+    ports { c_address0 { O 4 vector } c_ce0 { O 1 bit } c_q0 { I 32 vector } c_address1 { O 4 vector } c_ce1 { O 1 bit } c_q1 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c'"

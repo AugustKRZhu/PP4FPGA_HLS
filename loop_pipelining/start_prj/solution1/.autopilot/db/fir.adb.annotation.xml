@@ -1,0 +1,10 @@
+<annotationInfo>
+<item  id="24" filename="fir.c" linenumber="79" name="tmp" contextFuncName="fir" moduleName="fir" rtlName="tmp_fu_308_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="9" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_pipelining"><\/item>
+<item  id="29" filename="fir.c" linenumber="80" name="i_2" contextFuncName="fir" moduleName="fir" rtlName="i_2_fu_314_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_pipelining"><\/item>
+<item  id="109" filename="fir.c" linenumber="84" name="tmp_1" contextFuncName="fir" moduleName="fir" rtlName="tmp_1_reg_447" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_pipelining"><\/item>
+<item  id="116" filename="fir.c" linenumber="86" name="tmp_5" contextFuncName="fir" moduleName="fir" rtlName="tmp_5_fu_397_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_pipelining"><\/item>
+<item  id="117" filename="fir.c" linenumber="84" name="tmp_3" contextFuncName="fir" moduleName="fir" rtlName="tmp_3_fu_402_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_pipelining"><\/item>
+<item  id="143" filename="fir.c" linenumber="86" name="tmp_6" contextFuncName="fir" moduleName="fir" rtlName="tmp_6_fu_412_p2" latency="0" BRAM="-1" DSP="3" FF="0" LUT="21" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_pipelining"><\/item>
+<item  id="144" filename="fir.c" linenumber="86" name="acc_1" contextFuncName="fir" moduleName="fir" rtlName="acc_1_fu_417_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_pipelining"><\/item>
+<item  id="146" filename="fir.c" linenumber="84" name="i_3" contextFuncName="fir" moduleName="fir" rtlName="i_3_fu_406_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_pipelining"><\/item>
+</annotationInfo>

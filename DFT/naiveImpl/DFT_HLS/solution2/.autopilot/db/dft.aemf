@@ -1,0 +1,1300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1558103766000">
+  <ports id="1" name="sample_real" type="PortType" originalName="sample_real" coreName="RAM" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="256">
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+  </ports>
+  <ports id="2" name="sample_imag" type="PortType" originalName="sample_imag" coreName="RAM" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="256">
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+  </ports>
+  <edges id="93" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="94" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="97" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="98" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="99" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="100" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="103" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="106" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="107" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="108" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="109" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="125" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="126" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="129" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="130" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="132" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="133" source_obj="//@blocks.4/@node_objs.17" sink_obj="//@blocks.3/@node_objs.0" is_back_edge="1"/>
+  <edges id="134" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.0" is_back_edge="1"/>
+  <edges id="136" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="137" source_obj="//@blocks.4/@node_objs.12" sink_obj="//@blocks.3/@node_objs.1" is_back_edge="1"/>
+  <edges id="138" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.1" is_back_edge="1"/>
+  <edges id="140" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="141" source_obj="//@blocks.3/@node_objs.4" sink_obj="//@blocks.3/@node_objs.2" is_back_edge="1"/>
+  <edges id="142" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.2" is_back_edge="1"/>
+  <edges id="143" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="145" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="147" source_obj="//@blocks.3/@node_objs.3" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="148" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="152" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="153" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="154" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="157" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="160" source_obj="//@blocks.4/@node_objs.3" sink_obj="//@blocks.4/@node_objs.4"/>
+  <edges id="162" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="165" source_obj="//@blocks.4/@node_objs.5" sink_obj="//@blocks.4/@node_objs.6"/>
+  <edges id="171" source_obj="//@blocks.4/@node_objs.7" sink_obj="//@blocks.4/@node_objs.8"/>
+  <edges id="172" source_obj="//@blocks.4/@node_objs.4" sink_obj="//@blocks.4/@node_objs.8"/>
+  <edges id="177" source_obj="//@blocks.4/@node_objs.9" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="178" source_obj="//@blocks.4/@node_objs.6" sink_obj="//@blocks.4/@node_objs.10"/>
+  <edges id="179" source_obj="//@blocks.4/@node_objs.8" sink_obj="//@blocks.4/@node_objs.11"/>
+  <edges id="180" source_obj="//@blocks.4/@node_objs.10" sink_obj="//@blocks.4/@node_objs.11"/>
+  <edges id="181" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.4/@node_objs.12"/>
+  <edges id="182" source_obj="//@blocks.4/@node_objs.11" sink_obj="//@blocks.4/@node_objs.12"/>
+  <edges id="183" source_obj="//@blocks.4/@node_objs.12" sink_obj="//@blocks.4/@node_objs.13"/>
+  <edges id="185" source_obj="//@blocks.4/@node_objs.7" sink_obj="//@blocks.4/@node_objs.14"/>
+  <edges id="186" source_obj="//@blocks.4/@node_objs.6" sink_obj="//@blocks.4/@node_objs.14"/>
+  <edges id="187" source_obj="//@blocks.4/@node_objs.9" sink_obj="//@blocks.4/@node_objs.15"/>
+  <edges id="188" source_obj="//@blocks.4/@node_objs.4" sink_obj="//@blocks.4/@node_objs.15"/>
+  <edges id="189" source_obj="//@blocks.4/@node_objs.14" sink_obj="//@blocks.4/@node_objs.16"/>
+  <edges id="190" source_obj="//@blocks.4/@node_objs.15" sink_obj="//@blocks.4/@node_objs.16"/>
+  <edges id="191" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.4/@node_objs.17"/>
+  <edges id="192" source_obj="//@blocks.4/@node_objs.16" sink_obj="//@blocks.4/@node_objs.17"/>
+  <edges id="193" source_obj="//@blocks.4/@node_objs.17" sink_obj="//@blocks.4/@node_objs.18"/>
+  <edges id="195" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4/@node_objs.19"/>
+  <edges id="196" source_obj="//@blocks.7/@node_objs.2" sink_obj="//@blocks.7/@node_objs.0" is_back_edge="1"/>
+  <edges id="197" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7/@node_objs.0" is_back_edge="1"/>
+  <edges id="199" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="200" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="202" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.2"/>
+  <edges id="204" source_obj="//@blocks.7/@node_objs.1" sink_obj="//@blocks.7/@node_objs.3"/>
+  <edges id="205" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7/@node_objs.3"/>
+  <edges id="206" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.7/@node_objs.3"/>
+  <edges id="215" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="224" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="226" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8/@node_objs.4"/>
+  <edges id="227" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="228" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="229" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="230" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="231" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="232" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="233" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="234" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="235" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="236" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="237" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="238" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="262" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="263" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.6"/>
+  <edges id="264" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="265" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="266" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.5"/>
+  <edges id="267" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="268" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3" is_back_edge="1"/>
+  <edges id="269" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="270" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="271" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.9"/>
+  <edges id="272" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8"/>
+  <edges id="273" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7" is_back_edge="1"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.4/@node_objs.13"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.4/@node_objs.18"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.4/@node_objs.13"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.4/@node_objs.18"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.4/@node_objs.7"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.4/@node_objs.9"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@blocks.4/@node_objs.7"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@blocks.4/@node_objs.9"/>
+  <edges id="-1" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.7" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.9" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@blocks.8/@node_objs.3" sink_obj="//@ports.1"/>
+  <blocks id="15" name="block_15" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.loopexit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="temp_real" lineNumber="8" originalName="temp_real" fileName="dft.cpp" fileDirectory=".." rtlName="temp_real_U" coreName="RAM" contextFuncName="dft" bitwidth="32" opcode="alloca" m_display="0">
+      <inlineStackInfo fileName="dft.cpp" linenumber="8" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="temp_imag" lineNumber="9" originalName="temp_imag" fileName="dft.cpp" fileDirectory=".." rtlName="temp_imag_U" coreName="RAM" contextFuncName="dft" bitwidth="32" opcode="alloca" m_display="0">
+      <inlineStackInfo fileName="dft.cpp" linenumber="9" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="node_14" lineNumber="15" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="br" m_display="0" m_delay="1.66">
+      <inlineStackInfo fileName="dft.cpp" linenumber="15" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <controlInputObjs>.loopexit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dft.cpp">
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>9</validLinenumbers>
+      <validLinenumbers>15</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="21" name=".loopexit" type="BlockType">
+    <controlInputObjs>block_15</controlInputObjs>
+    <controlInputObjs>.loopexit.loopexit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.preheader.preheader</controlOutputObjs>
+    <controlOutputObjs>block_33</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="i" originalName="i" bitwidth="9" opcode="phi" nodeLabel="1.0" m_display="0">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>uitofp</dataOutputObjs>
+      <controlInputObjs>block_15</controlInputObjs>
+      <controlInputObjs>.loopexit.loopexit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="tmp" lineNumber="15" fileName="dft.cpp" fileDirectory=".." rtlName="tmp_fu_311_p2" contextFuncName="dft" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.58">
+      <inlineStackInfo fileName="dft.cpp" linenumber="15" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="i_5" lineNumber="15" originalName="i" fileName="dft.cpp" fileDirectory=".." rtlName="i_5_fu_317_p2" contextFuncName="dft" bitwidth="9" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.11">
+      <inlineStackInfo fileName="dft.cpp" linenumber="15" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="node_20" lineNumber="15" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="br" nodeLabel="1.0" m_display="0">
+      <inlineStackInfo fileName="dft.cpp" linenumber="15" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_33</controlInputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dft.cpp">
+      <validLinenumbers>15</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="33" name="block_33" type="BlockType">
+    <controlInputObjs>.loopexit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_41</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="node_24" lineNumber="16" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="store" nodeLabel="13.0" m_display="0" m_delay="3.25">
+      <inlineStackInfo fileName="dft.cpp" linenumber="16" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="node_26" lineNumber="17" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="store" nodeLabel="13.0" m_display="0" m_delay="3.25">
+      <inlineStackInfo fileName="dft.cpp" linenumber="17" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="tmp_11" lineNumber="18" fileName="dft.cpp" fileDirectory=".." rtlName="dft_uitofp_32ns_3pcA_U40" contextFuncName="dft" bitwidth="32" opcode="uitofp" nodeLabel="1.0" nodeLatency="4" m_display="0" m_delay="8.09">
+      <inlineStackInfo fileName="dft.cpp" linenumber="18" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>fpext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="tmp_12" lineNumber="18" fileName="dft.cpp" fileDirectory=".." rtlName="dft_fpext_32ns_64rcU_U43" contextFuncName="dft" bitwidth="64" opcode="fpext" nodeLabel="6.0" m_display="0" m_delay="5.34">
+      <inlineStackInfo fileName="dft.cpp" linenumber="18" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>uitofp</dataInputObjs>
+      <dataOutputObjs>dmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="tmp_13" lineNumber="18" fileName="dft.cpp" fileDirectory=".." rtlName="dft_dmul_64ns_64nsc4_U44" contextFuncName="dft" bitwidth="64" opcode="dmul" nodeLabel="7.0" nodeLatency="5" m_display="0" m_delay="7.79">
+      <inlineStackInfo fileName="dft.cpp" linenumber="18" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>fpext</dataInputObjs>
+      <dataOutputObjs>fptrunc</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="w" lineNumber="18" originalName="w" fileName="dft.cpp" fileDirectory=".." rtlName="dft_fptrunc_64ns_qcK_U41" contextFuncName="dft" bitwidth="32" opcode="fptrunc" nodeLabel="13.0" m_display="0" m_delay="6.4">
+      <inlineStackInfo fileName="dft.cpp" linenumber="18" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>dmul</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="node_32" lineNumber="19" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="br" nodeLabel="13.0" m_display="0" m_delay="1.66">
+      <inlineStackInfo fileName="dft.cpp" linenumber="19" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <controlInputObjs>block_41</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dft.cpp">
+      <validLinenumbers>16</validLinenumbers>
+      <validLinenumbers>17</validLinenumbers>
+      <validLinenumbers>18</validLinenumbers>
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="41" name="block_41" type="BlockType">
+    <controlInputObjs>block_33</controlInputObjs>
+    <controlInputObjs>block_66</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.loopexit.loopexit</controlOutputObjs>
+    <controlOutputObjs>block_66</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="tmp_15" lineNumber="23" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" bitwidth="32" opcode="phi" nodeLabel="14.0" m_display="0">
+      <inlineStackInfo fileName="dft.cpp" linenumber="23" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>fsub</dataInputObjs>
+      <dataOutputObjs>fsub</dataOutputObjs>
+      <controlInputObjs>block_33</controlInputObjs>
+      <controlInputObjs>block_66</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="tmp_16" lineNumber="22" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" bitwidth="32" opcode="phi" nodeLabel="14.0" m_display="0">
+      <inlineStackInfo fileName="dft.cpp" linenumber="22" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <controlInputObjs>block_33</controlInputObjs>
+      <controlInputObjs>block_66</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="j" originalName="j" bitwidth="9" opcode="phi" nodeLabel="14.0" m_display="0">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>uitofp</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <controlInputObjs>block_33</controlInputObjs>
+      <controlInputObjs>block_66</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="tmp_17" lineNumber="19" fileName="dft.cpp" fileDirectory=".." rtlName="tmp_17_fu_334_p2" contextFuncName="dft" bitwidth="1" opcode="icmp" nodeLabel="14.0" m_display="0" m_delay="1.58">
+      <inlineStackInfo fileName="dft.cpp" linenumber="19" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="j_1" lineNumber="19" originalName="j" fileName="dft.cpp" fileDirectory=".." rtlName="j_1_fu_340_p2" contextFuncName="dft" bitwidth="9" opcode="add" nodeLabel="14.0" m_display="0" m_delay="2.11">
+      <inlineStackInfo fileName="dft.cpp" linenumber="19" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="node_40" lineNumber="19" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="br" nodeLabel="14.0" m_display="0">
+      <inlineStackInfo fileName="dft.cpp" linenumber="19" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_66</controlInputObjs>
+      <controlInputObjs>.loopexit.loopexit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dft.cpp">
+      <validLinenumbers>23</validLinenumbers>
+      <validLinenumbers>22</validLinenumbers>
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="66" name="block_66" type="BlockType">
+    <controlInputObjs>block_41</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_41</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="tmp_19" lineNumber="20" fileName="dft.cpp" fileDirectory=".." rtlName="dft_uitofp_32ns_3pcA_U40" contextFuncName="dft" bitwidth="32" opcode="uitofp" nodeLabel="14.0" nodeLatency="4" m_display="0" m_delay="8.09">
+      <inlineStackInfo fileName="dft.cpp" linenumber="20" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="tmp_20" lineNumber="20" fileName="dft.cpp" fileDirectory=".." rtlName="dft_fmul_32ns_32nocq_U36" contextFuncName="dft" bitwidth="32" opcode="fmul" nodeLabel="19.0" nodeLatency="3" m_display="0" m_delay="5.64">
+      <inlineStackInfo fileName="dft.cpp" linenumber="20" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>uitofp</dataInputObjs>
+      <dataInputObjs>fptrunc</dataInputObjs>
+      <dataOutputObjs>fpext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="x_assign" lineNumber="20" originalName="x" fileName="dft.cpp" fileDirectory=".." rtlName="dft_fpext_32ns_64rcU_U43" contextFuncName="dft" bitwidth="64" opcode="fpext" nodeLabel="23.0" m_display="0" m_delay="5.34">
+      <inlineStackInfo fileName="dft.cpp" linenumber="20" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>fmul</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="tmp_i_i" lineNumber="143" fileName="/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp" fileDirectory="../../../../../../../../../wrk/2018.2/continuous/2018_06_14_2258646/src/products" rtlName="grp_sin_or_cos_double_s_fu_197" contextFuncName="cos" bitwidth="64" opcode="call" nodeLabel="24.0" nodeLatency="1" m_display="0" m_delay="5.16">
+      <inlineStackInfo fileName="dft.cpp" linenumber="20" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <inlineStackInfo fileName="/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp" linenumber="12" fileDirectory="/wrk/2018.2/continuous/2018_06_14_2258646/src/products" functionName="cos"/>
+      <inlineStackInfo fileName="/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp" linenumber="143" fileDirectory="/wrk/2018.2/continuous/2018_06_14_2258646/src/products" functionName="cos"/>
+      <dataInputObjs>fpext</dataInputObjs>
+      <dataOutputObjs>fptrunc</dataOutputObjs>
+      <constName>sin_or_cos_double_s</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="c" lineNumber="20" originalName="c" fileName="dft.cpp" fileDirectory=".." rtlName="dft_fptrunc_64ns_qcK_U41" contextFuncName="dft" bitwidth="32" opcode="fptrunc" nodeLabel="26.0" m_display="0" m_delay="6.4">
+      <inlineStackInfo fileName="dft.cpp" linenumber="20" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="tmp_i_i9" lineNumber="139" fileName="/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp" fileDirectory="../../../../../../../../../wrk/2018.2/continuous/2018_06_14_2258646/src/products" rtlName="grp_sin_or_cos_double_s_fu_216" contextFuncName="sin" bitwidth="64" opcode="call" nodeLabel="24.0" nodeLatency="1" m_display="0" m_delay="5.16">
+      <inlineStackInfo fileName="dft.cpp" linenumber="21" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <inlineStackInfo fileName="/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp" linenumber="7" fileDirectory="/wrk/2018.2/continuous/2018_06_14_2258646/src/products" functionName="sin"/>
+      <inlineStackInfo fileName="/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp" linenumber="139" fileDirectory="/wrk/2018.2/continuous/2018_06_14_2258646/src/products" functionName="sin"/>
+      <dataInputObjs>fpext</dataInputObjs>
+      <dataOutputObjs>fptrunc</dataOutputObjs>
+      <constName>sin_or_cos_double_s</constName>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="s" lineNumber="21" originalName="s" fileName="dft.cpp" fileDirectory=".." rtlName="dft_fptrunc_64ns_qcK_U42" contextFuncName="dft" bitwidth="32" opcode="fptrunc" nodeLabel="26.0" m_display="0" m_delay="6.4">
+      <inlineStackInfo fileName="dft.cpp" linenumber="21" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="sample_real_load" lineNumber="22" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" bitwidth="32" opcode="load" nodeLabel="25.0" nodeLatency="1" m_display="0" m_delay="3.25">
+      <inlineStackInfo fileName="dft.cpp" linenumber="22" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>sample_real</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+      <dataOutputObjs>sample_real</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="tmp_22" lineNumber="22" fileName="dft.cpp" fileDirectory=".." rtlName="dft_fmul_32ns_32nocq_U36" contextFuncName="dft" bitwidth="32" opcode="fmul" nodeLabel="27.0" nodeLatency="3" m_display="0" m_delay="5.64">
+      <inlineStackInfo fileName="dft.cpp" linenumber="22" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>fptrunc</dataInputObjs>
+      <dataOutputObjs>fsub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="sample_imag_load" lineNumber="22" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" bitwidth="32" opcode="load" nodeLabel="25.0" nodeLatency="1" m_display="0" m_delay="3.25">
+      <inlineStackInfo fileName="dft.cpp" linenumber="22" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>sample_imag</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+      <dataOutputObjs>sample_imag</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="tmp_23" lineNumber="22" fileName="dft.cpp" fileDirectory=".." rtlName="dft_fmul_32ns_32nocq_U37" contextFuncName="dft" bitwidth="32" opcode="fmul" nodeLabel="27.0" nodeLatency="3" m_display="0" m_delay="5.64">
+      <inlineStackInfo fileName="dft.cpp" linenumber="22" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>fptrunc</dataInputObjs>
+      <dataOutputObjs>fsub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="tmp_24" lineNumber="22" fileName="dft.cpp" fileDirectory=".." rtlName="dft_faddfsub_32nsncg_U34" contextFuncName="dft" bitwidth="32" opcode="fsub" nodeLabel="31.0" nodeLatency="4" m_display="0" m_delay="7.17">
+      <inlineStackInfo fileName="dft.cpp" linenumber="22" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>fmul</dataInputObjs>
+      <dataInputObjs>fmul</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="tmp_25" lineNumber="22" fileName="dft.cpp" fileDirectory=".." rtlName="dft_faddfsub_32nsncg_U34" contextFuncName="dft" bitwidth="32" opcode="fadd" nodeLabel="36.0" nodeLatency="4" m_display="0" m_delay="7.17">
+      <inlineStackInfo fileName="dft.cpp" linenumber="22" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>fsub</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="node_59" lineNumber="22" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="store" nodeLabel="41.0" m_display="0" m_delay="3.25">
+      <inlineStackInfo fileName="dft.cpp" linenumber="22" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="tmp_26" lineNumber="23" fileName="dft.cpp" fileDirectory=".." rtlName="dft_fmul_32ns_32nocq_U38" contextFuncName="dft" bitwidth="32" opcode="fmul" nodeLabel="27.0" nodeLatency="3" m_display="0" m_delay="5.64">
+      <inlineStackInfo fileName="dft.cpp" linenumber="23" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>fptrunc</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="tmp_27" lineNumber="23" fileName="dft.cpp" fileDirectory=".." rtlName="dft_fmul_32ns_32nocq_U39" contextFuncName="dft" bitwidth="32" opcode="fmul" nodeLabel="27.0" nodeLatency="3" m_display="0" m_delay="5.64">
+      <inlineStackInfo fileName="dft.cpp" linenumber="23" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>fptrunc</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="tmp_28" lineNumber="23" fileName="dft.cpp" fileDirectory=".." rtlName="dft_faddfsub_32nsncg_U35" contextFuncName="dft" bitwidth="32" opcode="fadd" nodeLabel="31.0" nodeLatency="4" m_display="0" m_delay="7.17">
+      <inlineStackInfo fileName="dft.cpp" linenumber="23" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>fmul</dataInputObjs>
+      <dataInputObjs>fmul</dataInputObjs>
+      <dataOutputObjs>fsub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="tmp_29" lineNumber="23" fileName="dft.cpp" fileDirectory=".." rtlName="dft_faddfsub_32nsncg_U35" contextFuncName="dft" bitwidth="32" opcode="fsub" nodeLabel="36.0" nodeLatency="4" m_display="0" m_delay="7.17">
+      <inlineStackInfo fileName="dft.cpp" linenumber="23" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="node_64" lineNumber="23" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="store" nodeLabel="41.0" m_display="0" m_delay="3.25">
+      <inlineStackInfo fileName="dft.cpp" linenumber="23" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>fsub</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="node_65" lineNumber="19" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="br" nodeLabel="41.0" m_display="0">
+      <inlineStackInfo fileName="dft.cpp" linenumber="19" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <controlInputObjs>block_41</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dft.cpp">
+      <validLinenumbers>20</validLinenumbers>
+      <validLinenumbers>21</validLinenumbers>
+      <validLinenumbers>22</validLinenumbers>
+      <validLinenumbers>23</validLinenumbers>
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp">
+      <validLinenumbers>143</validLinenumbers>
+      <validLinenumbers>139</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp">
+      <validLinenumbers>12</validLinenumbers>
+      <validLinenumbers>7</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="68" name=".loopexit.loopexit" type="BlockType">
+    <controlInputObjs>block_41</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.loopexit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="node_67" opcode="br" nodeLabel="14.0" m_display="0">
+      <controlInputObjs>.loopexit</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="70" name=".preheader.preheader" type="BlockType">
+    <controlInputObjs>.loopexit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="node_69" lineNumber="28" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.66">
+      <inlineStackInfo fileName="dft.cpp" linenumber="28" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <controlInputObjs>.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dft.cpp">
+      <validLinenumbers>28</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="76" name=".preheader" type="BlockType">
+    <controlInputObjs>.preheader.preheader</controlInputObjs>
+    <controlInputObjs>block_87</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_89</controlOutputObjs>
+    <controlOutputObjs>block_87</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="i_1" originalName="i" bitwidth="9" opcode="phi" nodeLabel="42.0" m_display="0">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <controlInputObjs>block_87</controlInputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="tmp_14" lineNumber="28" fileName="dft.cpp" fileDirectory=".." rtlName="tmp_14_fu_357_p2" contextFuncName="dft" bitwidth="1" opcode="icmp" nodeLabel="42.0" m_display="0" m_delay="1.58">
+      <inlineStackInfo fileName="dft.cpp" linenumber="28" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="i_4" lineNumber="28" originalName="i" fileName="dft.cpp" fileDirectory=".." rtlName="i_4_fu_363_p2" contextFuncName="dft" bitwidth="9" opcode="add" nodeLabel="42.0" m_display="0" m_delay="2.11">
+      <inlineStackInfo fileName="dft.cpp" linenumber="28" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="node_75" lineNumber="28" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="br" nodeLabel="42.0" m_display="0">
+      <inlineStackInfo fileName="dft.cpp" linenumber="28" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_87</controlInputObjs>
+      <controlInputObjs>block_89</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dft.cpp">
+      <validLinenumbers>28</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="87" name="block_87" type="BlockType">
+    <controlInputObjs>.preheader</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="temp_real_load" lineNumber="29" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" bitwidth="32" opcode="load" nodeLabel="42.0" nodeLatency="1" m_display="0" m_delay="3.25">
+      <inlineStackInfo fileName="dft.cpp" linenumber="29" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="node_81" lineNumber="29" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="store" nodeLabel="43.0" m_display="0" m_delay="3.25">
+      <inlineStackInfo fileName="dft.cpp" linenumber="29" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>sample_real</dataInputObjs>
+      <dataOutputObjs>sample_real</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="temp_imag_load" lineNumber="30" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" bitwidth="32" opcode="load" nodeLabel="42.0" nodeLatency="1" m_display="0" m_delay="3.25">
+      <inlineStackInfo fileName="dft.cpp" linenumber="30" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="node_85" lineNumber="30" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="store" nodeLabel="43.0" m_display="0" m_delay="3.25">
+      <inlineStackInfo fileName="dft.cpp" linenumber="30" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>sample_imag</dataInputObjs>
+      <dataOutputObjs>sample_imag</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="node_86" lineNumber="28" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="br" nodeLabel="43.0" m_display="0">
+      <inlineStackInfo fileName="dft.cpp" linenumber="28" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+      <controlInputObjs>.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dft.cpp">
+      <validLinenumbers>29</validLinenumbers>
+      <validLinenumbers>30</validLinenumbers>
+      <validLinenumbers>28</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="89" name="block_89" type="BlockType">
+    <controlInputObjs>.preheader</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="node_88" lineNumber="33" fileName="dft.cpp" fileDirectory=".." contextFuncName="dft" opcode="ret" nodeLabel="42.0" m_display="0">
+      <inlineStackInfo fileName="dft.cpp" linenumber="33" fileDirectory="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl" functionName="dft"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="dft.cpp">
+      <validLinenumbers>33</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <ScheduleInfo time="23"/>
+  <ScheduleInfo time="24"/>
+  <ScheduleInfo time="25"/>
+  <ScheduleInfo time="26"/>
+  <ScheduleInfo time="27"/>
+  <ScheduleInfo time="28"/>
+  <ScheduleInfo time="29"/>
+  <ScheduleInfo time="30"/>
+  <ScheduleInfo time="31"/>
+  <ScheduleInfo time="32"/>
+  <ScheduleInfo time="33"/>
+  <ScheduleInfo time="34"/>
+  <ScheduleInfo time="35"/>
+  <ScheduleInfo time="36"/>
+  <ScheduleInfo time="37"/>
+  <ScheduleInfo time="38"/>
+  <ScheduleInfo time="39"/>
+  <ScheduleInfo time="40"/>
+  <ScheduleInfo time="41"/>
+  <ScheduleInfo time="42"/>
+  <ScheduleInfo time="43"/>
+  <regnodes realName="s_reg_447">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_13_reg_388">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="sample_real_addr_1_reg_431">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="sample_real_load_reg_453">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="temp_imag_addr_1_reg_499">
+    <nodeIds>82</nodeIds>
+  </regnodes>
+  <regnodes realName="temp_real_addr_reg_393">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="i_5_reg_378">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_138">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="i_1_reg_186">
+    <nodeIds>71</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_15_reg_150">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="j_reg_174">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_297">
+    <nodeIds>57</nodeIds>
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_23_reg_465">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="w_reg_403">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_30_reg_383">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_31_reg_416">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="j_1_reg_411">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="c_reg_441">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="i_4_reg_483">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="temp_real_addr_1_reg_494">
+    <nodeIds>78</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_278">
+    <nodeIds>28</nodeIds>
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="temp_imag_addr_reg_398">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_26_reg_470">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="sample_imag_load_reg_459">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_27_reg_475">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_291">
+    <nodeIds>44</nodeIds>
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_284">
+    <nodeIds>29</nodeIds>
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_16_reg_162">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_18_reg_488">
+    <nodeIds>77</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_i_i_reg_421">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_i_i9_reg_426">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_304">
+    <nodeIds>62</nodeIds>
+    <nodeIds>63</nodeIds>
+  </regnodes>
+  <regnodes realName="sample_imag_addr_1_reg_436">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <expressionNodes realName="j_1_fu_340">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_311">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_phi_fu_142">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_imag_alloca_fu_50">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sample_imag_addr_1_gep_fu_93">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sample_real_addr_gep_fu_120">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_imag_addr_gep_fu_67">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="s_fu_267">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_real_addr_1_gep_fu_106">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_270">
+    <nodeIds>29</nodeIds>
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_1_phi_fu_190">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_17_fu_334">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_21_fu_351">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_real_alloca_fu_46">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sample_imag_addr_gep_fu_129">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_real_addr_gep_fu_54">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_s_fu_328">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_14_fu_357">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_4_fu_363">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sample_real_addr_1_gep_fu_80">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_16_phi_fu_166">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_18_fu_369">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_5_fu_317">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_phi_fu_178">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_imag_addr_1_gep_fu_113">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_31_fu_346">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_30_fu_323">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_264">
+    <nodeIds>31</nodeIds>
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_15_phi_fu_154">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_sin_or_cos_double_s_fu_197">
+    <nodeIds>46</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_261">
+    <nodeIds>28</nodeIds>
+    <nodeIds>43</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_249">
+    <nodeIds>56</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_239">
+    <nodeIds>62</nodeIds>
+    <nodeIds>63</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_245">
+    <nodeIds>44</nodeIds>
+    <nodeIds>53</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_235">
+    <nodeIds>57</nodeIds>
+    <nodeIds>58</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_257">
+    <nodeIds>61</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_sin_or_cos_double_s_fu_216">
+    <nodeIds>48</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_273">
+    <nodeIds>30</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_253">
+    <nodeIds>60</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="fourth_order_double_4" portID="100">
+    <nodeIds>46</nodeIds>
+    <nodeIds>48</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fourth_order_double_5" portID="100">
+    <nodeIds>46</nodeIds>
+    <nodeIds>48</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fourth_order_double_6" portID="100">
+    <nodeIds>46</nodeIds>
+    <nodeIds>48</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fourth_order_double_7" portID="100">
+    <nodeIds>46</nodeIds>
+    <nodeIds>48</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="fourth_order_double_s" portID="100">
+    <nodeIds>46</nodeIds>
+    <nodeIds>48</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="ref_4oPi_table_256_V" portID="100">
+    <nodeIds>46</nodeIds>
+    <nodeIds>48</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sample_imag">
+    <nodeIds>55</nodeIds>
+    <nodeIds>85</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sample_real">
+    <nodeIds>52</nodeIds>
+    <nodeIds>81</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="temp_imag">
+    <nodeIds>26</nodeIds>
+    <nodeIds>64</nodeIds>
+    <nodeIds>83</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="temp_real">
+    <nodeIds>24</nodeIds>
+    <nodeIds>59</nodeIds>
+    <nodeIds>79</nodeIds>
+  </memoryPorts>
+  <ioPorts name="sample_imag(p0)">
+    <contents name="load">
+      <nodeIds>55</nodeIds>
+    </contents>
+    <contents name="store">
+      <nodeIds>85</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="sample_real(p0)">
+    <contents name="load">
+      <nodeIds>52</nodeIds>
+    </contents>
+    <contents name="store">
+      <nodeIds>81</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="5" latency="5"/>
+      <operations id="69" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="28" stage="4" latency="5"/>
+    </states>
+    <states id="4">
+      <operations id="28" stage="3" latency="5"/>
+    </states>
+    <states id="5">
+      <operations id="28" stage="2" latency="5"/>
+    </states>
+    <states id="6">
+      <operations id="28" stage="1" latency="5"/>
+    </states>
+    <states id="7">
+      <operations id="29" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="30" stage="6" latency="6"/>
+    </states>
+    <states id="9">
+      <operations id="30" stage="5" latency="6"/>
+    </states>
+    <states id="10">
+      <operations id="30" stage="4" latency="6"/>
+    </states>
+    <states id="11">
+      <operations id="30" stage="3" latency="6"/>
+    </states>
+    <states id="12">
+      <operations id="30" stage="2" latency="6"/>
+    </states>
+    <states id="13">
+      <operations id="30" stage="1" latency="6"/>
+    </states>
+    <states id="14">
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+    </states>
+    <states id="15">
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="5" latency="5"/>
+      <operations id="67" stage="1" latency="1"/>
+    </states>
+    <states id="16">
+      <operations id="43" stage="4" latency="5"/>
+    </states>
+    <states id="17">
+      <operations id="43" stage="3" latency="5"/>
+    </states>
+    <states id="18">
+      <operations id="43" stage="2" latency="5"/>
+    </states>
+    <states id="19">
+      <operations id="43" stage="1" latency="5"/>
+    </states>
+    <states id="20">
+      <operations id="44" stage="4" latency="4"/>
+    </states>
+    <states id="21">
+      <operations id="44" stage="3" latency="4"/>
+    </states>
+    <states id="22">
+      <operations id="44" stage="2" latency="4"/>
+    </states>
+    <states id="23">
+      <operations id="44" stage="1" latency="4"/>
+    </states>
+    <states id="24">
+      <operations id="45" stage="1" latency="1"/>
+    </states>
+    <states id="25">
+      <operations id="46" stage="2" latency="2"/>
+      <operations id="48" stage="2" latency="2"/>
+    </states>
+    <states id="26">
+      <operations id="46" stage="1" latency="2"/>
+      <operations id="48" stage="1" latency="2"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="2" latency="2"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="2" latency="2"/>
+    </states>
+    <states id="27">
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="2"/>
+      <operations id="55" stage="1" latency="2"/>
+    </states>
+    <states id="28">
+      <operations id="53" stage="4" latency="4"/>
+      <operations id="56" stage="4" latency="4"/>
+      <operations id="60" stage="4" latency="4"/>
+      <operations id="61" stage="4" latency="4"/>
+    </states>
+    <states id="29">
+      <operations id="53" stage="3" latency="4"/>
+      <operations id="56" stage="3" latency="4"/>
+      <operations id="60" stage="3" latency="4"/>
+      <operations id="61" stage="3" latency="4"/>
+    </states>
+    <states id="30">
+      <operations id="53" stage="2" latency="4"/>
+      <operations id="56" stage="2" latency="4"/>
+      <operations id="60" stage="2" latency="4"/>
+      <operations id="61" stage="2" latency="4"/>
+    </states>
+    <states id="31">
+      <operations id="53" stage="1" latency="4"/>
+      <operations id="56" stage="1" latency="4"/>
+      <operations id="60" stage="1" latency="4"/>
+      <operations id="61" stage="1" latency="4"/>
+    </states>
+    <states id="32">
+      <operations id="57" stage="5" latency="5"/>
+      <operations id="62" stage="5" latency="5"/>
+    </states>
+    <states id="33">
+      <operations id="57" stage="4" latency="5"/>
+      <operations id="62" stage="4" latency="5"/>
+    </states>
+    <states id="34">
+      <operations id="57" stage="3" latency="5"/>
+      <operations id="62" stage="3" latency="5"/>
+    </states>
+    <states id="35">
+      <operations id="57" stage="2" latency="5"/>
+      <operations id="62" stage="2" latency="5"/>
+    </states>
+    <states id="36">
+      <operations id="57" stage="1" latency="5"/>
+      <operations id="62" stage="1" latency="5"/>
+    </states>
+    <states id="37">
+      <operations id="58" stage="5" latency="5"/>
+      <operations id="63" stage="5" latency="5"/>
+    </states>
+    <states id="38">
+      <operations id="58" stage="4" latency="5"/>
+      <operations id="63" stage="4" latency="5"/>
+    </states>
+    <states id="39">
+      <operations id="58" stage="3" latency="5"/>
+      <operations id="63" stage="3" latency="5"/>
+    </states>
+    <states id="40">
+      <operations id="58" stage="2" latency="5"/>
+      <operations id="63" stage="2" latency="5"/>
+    </states>
+    <states id="41">
+      <operations id="58" stage="1" latency="5"/>
+      <operations id="63" stage="1" latency="5"/>
+    </states>
+    <states id="42">
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+    </states>
+    <states id="43">
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="2" latency="2"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="2" latency="2"/>
+      <operations id="88" stage="1" latency="1"/>
+    </states>
+    <states id="44">
+      <operations id="79" stage="1" latency="2"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="2"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="57"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="58"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="60"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="61"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="62"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="63"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="64"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="65"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="66"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="67"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="68"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="69"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="70"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="72"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="73"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="75"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="76"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="77"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="78"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="79"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="80"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="81"/>
+    </transitions>
+    <transitions inState="23" outState="24">
+      <condition id="82"/>
+    </transitions>
+    <transitions inState="24" outState="25">
+      <condition id="83"/>
+    </transitions>
+    <transitions inState="25" outState="26">
+      <condition id="84"/>
+    </transitions>
+    <transitions inState="26" outState="27">
+      <condition id="85"/>
+    </transitions>
+    <transitions inState="27" outState="28">
+      <condition id="86"/>
+    </transitions>
+    <transitions inState="28" outState="29">
+      <condition id="87"/>
+    </transitions>
+    <transitions inState="29" outState="30">
+      <condition id="88"/>
+    </transitions>
+    <transitions inState="30" outState="31">
+      <condition id="89"/>
+    </transitions>
+    <transitions inState="31" outState="32">
+      <condition id="90"/>
+    </transitions>
+    <transitions inState="32" outState="33">
+      <condition id="91"/>
+    </transitions>
+    <transitions inState="33" outState="34">
+      <condition id="92"/>
+    </transitions>
+    <transitions inState="34" outState="35">
+      <condition id="93"/>
+    </transitions>
+    <transitions inState="35" outState="36">
+      <condition id="94"/>
+    </transitions>
+    <transitions inState="36" outState="37">
+      <condition id="95"/>
+    </transitions>
+    <transitions inState="37" outState="38">
+      <condition id="96"/>
+    </transitions>
+    <transitions inState="38" outState="39">
+      <condition id="97"/>
+    </transitions>
+    <transitions inState="39" outState="40">
+      <condition id="98"/>
+    </transitions>
+    <transitions inState="40" outState="41">
+      <condition id="99"/>
+    </transitions>
+    <transitions inState="41" outState="42">
+      <condition id="100"/>
+    </transitions>
+    <transitions inState="42" outState="15">
+      <condition id="102"/>
+    </transitions>
+    <transitions inState="15" outState="2">
+      <condition id="104"/>
+    </transitions>
+    <transitions inState="2" outState="43">
+      <condition id="106"/>
+    </transitions>
+    <transitions inState="43" outState="44">
+      <condition id="107"/>
+    </transitions>
+    <transitions inState="44" outState="43">
+      <condition id="110"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="dft" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="4591618" mMaxLatency="5115906">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>7</subRegions>
+      <subRegions>8</subRegions>
+      <subRegions>9</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>15</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Loop 1" mII="-1" mDepth="-1" mMinTripCount="256" mMaxTripCount="256" mMinLatency="4591104" mMaxLatency="5115392" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="12">
+      <basicBlocks>21</basicBlocks>
+      <basicBlocks>33</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="Loop 1.1" mII="-1" mDepth="-1" mMinTripCount="256" mMaxTripCount="256" mMinLatency="17920" mMaxLatency="19968" mType="1">
+      <basicBlocks>41</basicBlocks>
+      <basicBlocks>66</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>68</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Region 3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>70</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="8" mTag="Loop 2" mII="-1" mDepth="-1" mMinTripCount="256" mMaxTripCount="256" mMinLatency="512" mMaxLatency="512" mType="1">
+      <basicBlocks>76</basicBlocks>
+      <basicBlocks>87</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="9" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>89</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,66 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2018.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Fri Nov 30 14:14:30 CET 2018
+INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/bit_width_optimization'
+INFO: [HLS 200-10] Opening and resetting project '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/bit_width_optimization/start_prj'.
+INFO: [HLS 200-10] Adding design file 'multiple_bw.c' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/bit_width_optimization/start_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Analyzing design file 'multiple_bw.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 375.664 ; gain = 0.109 ; free physical = 5616 ; free virtual = 17822
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 375.664 ; gain = 0.109 ; free physical = 5616 ; free virtual = 17822
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 375.664 ; gain = 0.109 ; free physical = 5612 ; free virtual = 17822
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 375.664 ; gain = 0.109 ; free physical = 5612 ; free virtual = 17822
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 503.555 ; gain = 128.000 ; free physical = 5594 ; free virtual = 17803
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 503.555 ; gain = 128.000 ; free physical = 5601 ; free virtual = 17810
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 5.05 seconds; current allocated memory: 58.700 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 58.757 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'mult/a' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mult/b' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mult/c' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'mult' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'mult_mul_64s_64s_64_5_1' to 'mult_mul_64s_64s_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'mult_mul_64s_64s_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mult'.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 58.921 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'mult_mul_64s_64s_bkb_MulnS_0'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 503.555 ; gain = 128.000 ; free physical = 5596 ; free virtual = 17805
+INFO: [SYSC 207-301] Generating SystemC RTL for mult.
+INFO: [VHDL 208-304] Generating VHDL RTL for mult.
+INFO: [VLOG 209-307] Generating Verilog RTL for mult.
+ERROR: [COSIM 212-50] Cannot find C test bench. Please specify test bench files using 'add_files -tb'.
+1
+    while executing
+"source [lindex $::argv 1] "
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 { source [lindex $::argv 1] } "
+
+INFO: [HLS 200-112] Total elapsed time: 5.41 seconds; peak allocated memory: 58.921 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Fri Nov 30 14:14:35 2018...

@@ -1,0 +1,14 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2018.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-48-generic) on Fri May 17 16:29:12 CEST 2019
+INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/DFT/naiveImpl/hls'
+[2Kvivado_hls> [12C[2Kvivado_hls> o[13C[2Kvivado_hls> op[14C[2Kvivado_hls> ope[15C[2Kvivado_hls> open[16C[2Kvivado_hls> open_[17C[2Kvivado_hls> open_p[18C[2Kvivado_hls> open_pr[19C[2Kvivado_hls> open_pro[20C[2Kvivado_hls> open_project[24C[2Kvivado_hls> open_project[24C[2Kvivado_hls> open_project [25C[2Kvivado_hls> open_project D[26C[2Kvivado_hls> open_project DF[27C
+No match found.
+[2Kvivado_hls> open_project DF[27C[2Kvivado_hls> open_project DF[27C[2Kvivado_hls> open_project D[26C[2Kvivado_hls> open_project [25C[2Kvivado_hls> open_project .[26C[2Kvivado_hls> open_project ./[27C[2Kvivado_hls> open_project ./D[28C[2Kvivado_hls> open_project ./DF[29C[2Kvivado_hls> open_project ./DF[29C[2Kvivado_hls> open_project ./DF[29C[2Kvivado_hls> open_project ./DF[29C[2Kvivado_hls> open_project ./D[28C[2Kvivado_hls> open_project ./[27C[2Kvivado_hls> open_project .[26CINFO: [Common 17-206] Exiting vivado_hls at Fri May 17 16:29:24 2019...

@@ -1,0 +1,22 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <config>
+        <schedule model="matrix_vector"/>
+    </config>
+    <name>
+        <value string="solution"/>
+    </name>
+    <project>
+        <value string="matrix_vector_base.proj"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xc7v585t:ffg1761:-2"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/virtex7/virtex7" name="DefaultPlatform"/>
+        <library value="xilinx/virtex7/virtex7_fpv6" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock default="false" name="default" period="5"/>
+    </clockList>
+</AutoPilot:solution>
+

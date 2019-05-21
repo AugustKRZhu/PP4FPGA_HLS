@@ -1,0 +1,29 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../matrix_vector_base-top.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-46-generic) on Tue Apr 23 15:06:48 CEST 2019
+INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/matrix_vector_mult/matrix_vector_base/matrix_vector_base.proj/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/102051556024808609166
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../matrix_vector_base.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-46-generic) on Tue Apr 23 15:06:53 CEST 2019
+INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/matrix_vector_mult/matrix_vector_base/matrix_vector_base.proj/solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/102681556024813310541
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+INPUTS
+Printing DFT Output
+   0	140
+   1	168
+   2	196
+   3	224
+   4	252
+   5	280
+   6	308
+   7	336
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,4 @@
+Running: xsim.dir/dft/xsimk -simmode gui -wdb dft.wdb -simrunnum 0 -socket 54045
+Design successfully loaded
+Design Loading Memory Usage: 47332 KB (Peak: 47332 KB)
+Design Loading CPU Usage: 30 ms

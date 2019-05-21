@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'fir'" level="0">
-<item name = "Date">Wed Nov 28 16:11:32 2018
+<item name = "Date">Thu Nov 29 14:33:22 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">start_prj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">62, 64, 62, 64, none</column>
+<column name="">10, 10, 10, 10, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,6 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TDL">15, 17, 5, -, -, 3, no</column>
-<column name="- MAC">44, 44, 4, -, -, 11, no</column>
 </table>
 </item>
 </section>

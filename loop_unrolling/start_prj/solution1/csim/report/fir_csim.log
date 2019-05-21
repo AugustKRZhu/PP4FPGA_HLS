@@ -2,17 +2,17 @@ INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling(apcc) ../../../../fir_test.c in debug mode
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Wed Nov 28 15:34:55 CET 2018
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Thu Nov 29 15:03:51 CET 2018
 INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
 INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling/start_prj/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/150521543415695698461
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/274331543500231688625
 INFO: [APCC 202-1] APCC is done.
    Compiling(apcc) ../../../../fir.c in debug mode
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Wed Nov 28 15:34:59 CET 2018
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Thu Nov 29 15:03:55 CET 2018
 INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
 INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling/start_prj/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/151171543415700001420
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/274981543500236042430
 INFO: [APCC 202-1] APCC is done.
    Generating csim.exe
 Comparing against output data 

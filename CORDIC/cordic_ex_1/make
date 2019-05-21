@@ -1,0 +1,6 @@
+makefile:
+all: cordic_main
+
+
+cordic_main: cordic_main.o
+	     c++ -o cordic_main

@@ -2,16 +2,16 @@
    Compiling apatb_fir.cpp
    Compiling (apcc) fir.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Wed Nov 28 15:35:11 CET 2018
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Thu Nov 29 15:04:07 CET 2018
 INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
 INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling/start_prj/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/152891543415711410599
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/276681543500247870144
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) fir_test.c_pre.c.tb.c
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Wed Nov 28 15:35:14 CET 2018
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-36-generic) on Thu Nov 29 15:04:11 CET 2018
 INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
 INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling/start_prj/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
@@ -30,6 +30,6 @@ typedef _Complex float __cfloat128 __attribute__ ((__mode__ (__TC__)));
 2 errors generated.
 ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
 ERROR: [APCC 202-1] ProcessSources failed
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/153511543415714813859
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_ramdas/277291543500251288184
 ERROR: [APCC 202-1] APCC failed.
 cosim.tv.mk:68: recipe for target 'obj/fir_test.c_pre.c.tb.o' failed

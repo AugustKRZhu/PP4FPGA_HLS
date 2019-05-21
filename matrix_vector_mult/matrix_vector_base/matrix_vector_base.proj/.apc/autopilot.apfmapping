@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matrix_vector_base.c" path="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/matrix_vector_mult/matrix_vector_base/matrix_vector_base.c"/>
+  </source>
+  <testbench>
+    <originFiles name="matrix_vector_base-top.c" path="/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/matrix_vector_mult/matrix_vector_base/matrix_vector_base-top.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

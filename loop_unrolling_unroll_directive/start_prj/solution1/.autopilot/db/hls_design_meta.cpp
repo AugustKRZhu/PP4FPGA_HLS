@@ -11,6 +11,9 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("c_address0", 4, hls_out, 1, "ap_memory", "mem_address", 1),
 	Port_Property("c_ce0", 1, hls_out, 1, "ap_memory", "mem_ce", 1),
 	Port_Property("c_q0", 32, hls_in, 1, "ap_memory", "mem_dout", 1),
+	Port_Property("c_address1", 4, hls_out, 1, "ap_memory", "mem_address", 1),
+	Port_Property("c_ce1", 1, hls_out, 1, "ap_memory", "mem_ce", 1),
+	Port_Property("c_q1", 32, hls_in, 1, "ap_memory", "mem_dout", 1),
 	Port_Property("x", 32, hls_in, 2, "ap_none", "in_data", 1),
 };
 const char* HLS_Design_Meta::dut_name = "fir";

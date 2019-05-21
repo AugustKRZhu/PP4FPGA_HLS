@@ -18,7 +18,7 @@ set C_modelName {fir}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ y int 32 regular {pointer 1}  }
-	{ c int 32 regular {array 11 { 1 3 } 1 1 }  }
+	{ c int 32 regular {array 11 { 1 1 } 1 1 }  }
 	{ x int 32 regular  }
 }
 set C_modelArgMapList {[ 
@@ -26,7 +26,7 @@ set C_modelArgMapList {[
  	{ "Name" : "c", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "c","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 10,"step" : 1}]}]}]} , 
  	{ "Name" : "x", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "x","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} ]}
 # RTL Port declarations: 
-set portNum 12
+set portNum 15
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -39,6 +39,9 @@ set portList {
 	{ c_address0 sc_out sc_lv 4 signal 1 } 
 	{ c_ce0 sc_out sc_logic 1 signal 1 } 
 	{ c_q0 sc_in sc_lv 32 signal 1 } 
+	{ c_address1 sc_out sc_lv 4 signal 1 } 
+	{ c_ce1 sc_out sc_logic 1 signal 1 } 
+	{ c_q1 sc_in sc_lv 32 signal 1 } 
 	{ x sc_in sc_lv 32 signal 2 } 
 }
 set NewPortList {[ 
@@ -53,6 +56,9 @@ set NewPortList {[
  	{ "name": "c_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "c", "role": "address0" }} , 
  	{ "name": "c_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "c", "role": "ce0" }} , 
  	{ "name": "c_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "c", "role": "q0" }} , 
+ 	{ "name": "c_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "c", "role": "address1" }} , 
+ 	{ "name": "c_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "c", "role": "ce1" }} , 
+ 	{ "name": "c_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "c", "role": "q1" }} , 
  	{ "name": "x", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "x", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
@@ -62,7 +68,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "62", "EstimateLatencyMax" : "64",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "10", "EstimateLatencyMax" : "10",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -74,40 +80,38 @@ set RtlHierarchyInfo {[
 			{"Name" : "c", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "x", "Type" : "None", "Direction" : "I"},
 			{"Name" : "shift_reg_9", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg_5", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg_1", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg_0", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg_2", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg_4", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg_6", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "shift_reg_8", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg_10", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg_4", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "shift_reg_3", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg_7", "Type" : "OVld", "Direction" : "IO"}]}]}
+			{"Name" : "shift_reg_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg_0", "Type" : "OVld", "Direction" : "IO"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	fir {
-		y {Type O LastRead -1 FirstWrite 5}
-		c {Type I LastRead 5 FirstWrite -1}
-		x {Type I LastRead 0 FirstWrite -1}
+		y {Type O LastRead -1 FirstWrite 10}
+		c {Type I LastRead 6 FirstWrite -1}
+		x {Type I LastRead 7 FirstWrite -1}
 		shift_reg_9 {Type IO LastRead -1 FirstWrite -1}
-		shift_reg_5 {Type IO LastRead -1 FirstWrite -1}
-		shift_reg_1 {Type IO LastRead -1 FirstWrite -1}
-		shift_reg_0 {Type IO LastRead -1 FirstWrite -1}
-		shift_reg_2 {Type IO LastRead -1 FirstWrite -1}
-		shift_reg_4 {Type IO LastRead -1 FirstWrite -1}
-		shift_reg_6 {Type IO LastRead -1 FirstWrite -1}
 		shift_reg_8 {Type IO LastRead -1 FirstWrite -1}
-		shift_reg_10 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg_7 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg_6 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg_5 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg_4 {Type IO LastRead -1 FirstWrite -1}
 		shift_reg_3 {Type IO LastRead -1 FirstWrite -1}
-		shift_reg_7 {Type IO LastRead -1 FirstWrite -1}}}
+		shift_reg_2 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg_1 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg_0 {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "62", "Max" : "64"}
-	, {"Name" : "Interval", "Min" : "63", "Max" : "65"}
+	{"Name" : "Latency", "Min" : "10", "Max" : "10"}
+	, {"Name" : "Interval", "Min" : "11", "Max" : "11"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -115,7 +119,7 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	y { ap_vld {  { y out_data 1 32 }  { y_ap_vld out_vld 1 1 } } }
-	c { ap_memory {  { c_address0 mem_address 1 4 }  { c_ce0 mem_ce 1 1 }  { c_q0 mem_dout 0 32 } } }
+	c { ap_memory {  { c_address0 mem_address 1 4 }  { c_ce0 mem_ce 1 1 }  { c_q0 mem_dout 0 32 }  { c_address1 mem_address 1 4 }  { c_ce1 mem_ce 1 1 }  { c_q1 mem_dout 0 32 } } }
 	x { ap_none {  { x in_data 0 32 } } }
 }
 

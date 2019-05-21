@@ -1,0 +1,71 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'ramdas' on host 'ramdas-Precision-Tower-3620' (Linux_x86_64 version 4.15.0-46-generic) on Tue Apr 23 16:40:37 CEST 2019
+INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/matrix_vector_mult/matrix_vector_base'
+INFO: [HLS 200-10] Opening project '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/matrix_vector_mult/matrix_vector_base/matrix_vector_base.proj'.
+INFO: [HLS 200-10] Adding design file './matrix_vector_base.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'matrix_vector_base-top.c' to the project
+INFO: [HLS 200-10] Opening solution '/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/matrix_vector_mult/matrix_vector_base/matrix_vector_base.proj/solution'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7v585tffg1761-2'
+INFO: [HLS 200-10] Analyzing design file './matrix_vector_base.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 375.699 ; gain = 0.141 ; free physical = 1962 ; free virtual = 20692
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 375.699 ; gain = 0.141 ; free physical = 1962 ; free virtual = 20692
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 375.699 ; gain = 0.141 ; free physical = 1960 ; free virtual = 20691
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 375.699 ; gain = 0.141 ; free physical = 1960 ; free virtual = 20691
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'data_loop' (./matrix_vector_base.c:9) in function 'matrix_vector' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'dot_product_loop' (./matrix_vector_base.c:13) in function 'matrix_vector' completely.
+INFO: [XFORM 203-101] Partitioning array 'M' (./matrix_vector_base.c:4) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'V_In' (./matrix_vector_base.c:4) in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrix_vector' (./matrix_vector_base.c:4)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 503.559 ; gain = 128.000 ; free physical = 1942 ; free virtual = 20673
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 503.559 ; gain = 128.000 ; free physical = 1949 ; free virtual = 20681
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_vector' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_vector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'data_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.01 seconds; current allocated memory: 61.664 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 61.993 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_vector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_Out' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_vector' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matrix_vector_mul_32s_32s_32_3_1' to 'matrix_vector_mulbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrix_vector_mulbkb': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_vector'.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 62.740 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'matrix_vector_mulbkb_MulnS_0'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 503.559 ; gain = 128.000 ; free physical = 1881 ; free virtual = 20669
+INFO: [SYSC 207-301] Generating SystemC RTL for matrix_vector.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_vector.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_vector.
+INFO: [HLS 200-112] Total elapsed time: 7.13 seconds; peak allocated memory: 62.740 MB.

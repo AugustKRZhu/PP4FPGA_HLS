@@ -1,0 +1,154 @@
+
+
+================================================================
+== Vivado HLS Report for 'mult'
+================================================================
+* Date:           Fri Nov 30 14:14:35 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        start_prj
+* Solution:       solution1
+* Product family: aartix7
+* Target device:  xa7a12tcsg325-1q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.890|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    4|    4|    4|    4|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.89>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%c_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %c) nounwind"   --->   Operation 6 'read' 'c_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%b_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %b) nounwind"   --->   Operation 7 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [5/5] (6.89ns)   --->   "%a_assign = mul nsw i64 %c_read, %b_read" [multiple_bw.c:2]   --->   Operation 8 'mul' 'a_assign' <Predicate = true> <Delay = 6.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.89>
+ST_2 : Operation 9 [4/5] (6.89ns)   --->   "%a_assign = mul nsw i64 %c_read, %b_read" [multiple_bw.c:2]   --->   Operation 9 'mul' 'a_assign' <Predicate = true> <Delay = 6.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.89>
+ST_3 : Operation 10 [3/5] (6.89ns)   --->   "%a_assign = mul nsw i64 %c_read, %b_read" [multiple_bw.c:2]   --->   Operation 10 'mul' 'a_assign' <Predicate = true> <Delay = 6.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.89>
+ST_4 : Operation 11 [2/5] (6.89ns)   --->   "%a_assign = mul nsw i64 %c_read, %b_read" [multiple_bw.c:2]   --->   Operation 11 'mul' 'a_assign' <Predicate = true> <Delay = 6.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.89>
+ST_5 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %a) nounwind, !map !7"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %b) nounwind, !map !13"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %c) nounwind, !map !19"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @mult_str) nounwind"   --->   Operation 15 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 16 [1/5] (6.89ns)   --->   "%a_assign = mul nsw i64 %c_read, %b_read" [multiple_bw.c:2]   --->   Operation 16 'mul' 'a_assign' <Predicate = true> <Delay = 6.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 6.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 17 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i64P(i64* %a, i64 %a_assign) nounwind" [multiple_bw.c:2]   --->   Operation 17 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 18 [1/1] (0.00ns)   --->   "ret void" [multiple_bw.c:3]   --->   Operation 18 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 6.89ns
+The critical path consists of the following:
+	wire read on port 'c' [8]  (0 ns)
+	'mul' operation ('a_assign', multiple_bw.c:2) [10]  (6.89 ns)
+
+ <State 2>: 6.89ns
+The critical path consists of the following:
+	'mul' operation ('a_assign', multiple_bw.c:2) [10]  (6.89 ns)
+
+ <State 3>: 6.89ns
+The critical path consists of the following:
+	'mul' operation ('a_assign', multiple_bw.c:2) [10]  (6.89 ns)
+
+ <State 4>: 6.89ns
+The critical path consists of the following:
+	'mul' operation ('a_assign', multiple_bw.c:2) [10]  (6.89 ns)
+
+ <State 5>: 6.89ns
+The critical path consists of the following:
+	'mul' operation ('a_assign', multiple_bw.c:2) [10]  (6.89 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

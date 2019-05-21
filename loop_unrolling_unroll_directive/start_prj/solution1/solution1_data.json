@@ -20,7 +20,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "62",
+    "Latency": "10",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -78,7 +78,25 @@
           "Width": "4"
         }}
     },
+    "c_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "4",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "4"
+        }}
+    },
     "c_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }}
+    },
+    "c_q1": {
       "type": "data",
       "dir": "in",
       "width": "32",
@@ -151,6 +169,18 @@
       "dir": "in",
       "width": "32"
     },
+    "c_address1": {
+      "dir": "out",
+      "width": "4"
+    },
+    "c_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "c_q1": {
+      "dir": "in",
+      "width": "32"
+    },
     "x": {
       "dir": "in",
       "width": "32"
@@ -166,10 +196,18 @@
       "dir": "out",
       "dataWidth": "32",
       "handshakeRef": "ap_vld",
-      "firstOutLatency": "5"
+      "firstOutLatency": "10"
     },
     "c_q0": {
       "interfaceRef": "c_q0",
+      "dir": "in",
+      "dataWidth": "32",
+      "busTypeRef": "ap_memory",
+      "arraySize": "11",
+      "handshakeRef": "ap_none"
+    },
+    "c_q1": {
+      "interfaceRef": "c_q1",
       "dir": "in",
       "dataWidth": "32",
       "busTypeRef": "ap_memory",
@@ -187,12 +225,10 @@
     "Hierarchy": {"ModuleName": "fir"},
     "Metrics": {"fir": {
         "Latency": {
-          "LatencyBest": "62",
-          "LatencyAvg": "63",
-          "LatencyWorst": "64",
-          "PipelineIIMin": "63",
-          "PipelineIIMax": "65",
-          "PipelineII": "63 ~ 65",
+          "LatencyBest": "10",
+          "LatencyAvg": "10",
+          "LatencyWorst": "10",
+          "PipelineII": "11",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -201,28 +237,10 @@
           "Uncertainty": "1.25",
           "Estimate": "8.470"
         },
-        "Loops": [
-          {
-            "Name": "TDL",
-            "TripCount": "3",
-            "LatencyMin": "15",
-            "LatencyMax": "17",
-            "Latency": "15 ~ 17",
-            "PipelineII": "",
-            "PipelineDepth": "5"
-          },
-          {
-            "Name": "MAC",
-            "TripCount": "11",
-            "Latency": "44",
-            "PipelineII": "",
-            "PipelineDepth": "4"
-          }
-        ],
         "Area": {
-          "DSP48E": "3",
-          "FF": "940",
-          "LUT": "681",
+          "DSP48E": "33",
+          "FF": "971",
+          "LUT": "698",
           "BRAM_18K": "0"
         }
       }}
@@ -234,7 +252,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-11-28 16:11:32 CET",
+    "Time": "2018-11-29 14:33:23 CET",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

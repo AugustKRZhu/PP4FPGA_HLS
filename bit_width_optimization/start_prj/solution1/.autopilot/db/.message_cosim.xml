@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="ERROR" prefix="[COSIM 212-50]" key="COSIM_TCL_50_1118" tag="" content="Cannot find C test bench. Please specify test bench files using &apos;add_files -tb&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-112]" key="HLS_112_964" tag="" content="Total elapsed time: 5.41 seconds; peak allocated memory: 58.921 MB."/>
+	<Message severity="INFO" prefix="[Common 17-206]" key="Common 17-206" tag="" content="Exiting vivado_hls at Fri Nov 30 14:14:35 2018..."/>
+</Messages>

@@ -1,0 +1,236 @@
+
+
+================================================================
+== Vivado HLS Report for 'matrix_vector'
+================================================================
+* Date:           Tue Apr 23 16:40:44 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        matrix_vector_base.proj
+* Solution:       solution
+* Product family: virtex7
+* Target device:  xc7v585tffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.108|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   15|   15|   15|   15|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- data_loop  |   13|   13|         7|          1|          1|     8|    yes   |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|     273|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|     32|    1328|     392|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|      48|
+|Register         |        0|      -|    1523|     320|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|     32|    2851|    1033|
++-----------------+---------+-------+--------+--------+
+|Available        |     1590|   1260|  728400|  364200|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      2|   ~0   |   ~0   |
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-----+----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF | LUT|
+    +-------------------------+----------------------+---------+-------+-----+----+
+    |matrix_vector_mulbkb_U1  |matrix_vector_mulbkb  |        0|      4|  166|  49|
+    |matrix_vector_mulbkb_U2  |matrix_vector_mulbkb  |        0|      4|  166|  49|
+    |matrix_vector_mulbkb_U3  |matrix_vector_mulbkb  |        0|      4|  166|  49|
+    |matrix_vector_mulbkb_U4  |matrix_vector_mulbkb  |        0|      4|  166|  49|
+    |matrix_vector_mulbkb_U5  |matrix_vector_mulbkb  |        0|      4|  166|  49|
+    |matrix_vector_mulbkb_U6  |matrix_vector_mulbkb  |        0|      4|  166|  49|
+    |matrix_vector_mulbkb_U7  |matrix_vector_mulbkb  |        0|      4|  166|  49|
+    |matrix_vector_mulbkb_U8  |matrix_vector_mulbkb  |        0|      4|  166|  49|
+    +-------------------------+----------------------+---------+-------+-----+----+
+    |Total                    |                      |        0|     32| 1328| 392|
+    +-------------------------+----------------------+---------+-------+-----+----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |V_Out_d0                 |     +    |      0|  0|  32|          32|          32|
+    |i_1_fu_252_p2            |     +    |      0|  0|  13|           4|           1|
+    |tmp1_fu_324_p2           |     +    |      0|  0|  32|          32|          32|
+    |tmp2_fu_302_p2           |     +    |      0|  0|  39|          32|          32|
+    |tmp3_fu_306_p2           |     +    |      0|  0|  39|          32|          32|
+    |tmp4_fu_318_p2           |     +    |      0|  0|  32|          32|          32|
+    |tmp5_fu_310_p2           |     +    |      0|  0|  32|          32|          32|
+    |tmp6_fu_314_p2           |     +    |      0|  0|  39|          32|          32|
+    |exitcond1_fu_246_p2      |   icmp   |      0|  0|  11|           4|           5|
+    |ap_enable_pp0            |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1  |    xor   |      0|  0|   2|           2|           1|
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |Total                    |          |      0|  0| 273|         235|         233|
+    +-------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  21|          4|    1|          4|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter6  |   9|          2|    1|          2|
+    |i_reg_235                |   9|          2|    4|          8|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  48|         10|    7|         16|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |M_0_load_reg_428         |  32|   0|   32|          0|
+    |M_1_load_reg_433         |  32|   0|   32|          0|
+    |M_2_load_reg_438         |  32|   0|   32|          0|
+    |M_3_load_reg_443         |  32|   0|   32|          0|
+    |M_4_load_reg_448         |  32|   0|   32|          0|
+    |M_5_load_reg_453         |  32|   0|   32|          0|
+    |M_6_load_reg_458         |  32|   0|   32|          0|
+    |M_7_load_reg_463         |  32|   0|   32|          0|
+    |V_In_0_read_reg_348      |  32|   0|   32|          0|
+    |V_In_1_read_reg_358      |  32|   0|   32|          0|
+    |V_In_2_read_reg_368      |  32|   0|   32|          0|
+    |V_In_3_read_reg_378      |  32|   0|   32|          0|
+    |V_In_4_read_reg_388      |  32|   0|   32|          0|
+    |V_In_5_read_reg_398      |  32|   0|   32|          0|
+    |V_In_6_read_reg_408      |  32|   0|   32|          0|
+    |V_In_7_read_reg_418      |  32|   0|   32|          0|
+    |ap_CS_fsm                |   3|   0|    3|          0|
+    |ap_enable_reg_pp0_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6  |   1|   0|    1|          0|
+    |exitcond1_reg_334        |   1|   0|    1|          0|
+    |i_reg_235                |   4|   0|    4|          0|
+    |tmp2_reg_508             |  32|   0|   32|          0|
+    |tmp3_reg_513             |  32|   0|   32|          0|
+    |tmp4_reg_518             |  32|   0|   32|          0|
+    |tmp_3_1_reg_473          |  32|   0|   32|          0|
+    |tmp_3_2_reg_478          |  32|   0|   32|          0|
+    |tmp_3_3_reg_483          |  32|   0|   32|          0|
+    |tmp_3_4_reg_488          |  32|   0|   32|          0|
+    |tmp_3_5_reg_493          |  32|   0|   32|          0|
+    |tmp_3_6_reg_498          |  32|   0|   32|          0|
+    |tmp_3_7_reg_503          |  32|   0|   32|          0|
+    |tmp_3_reg_468            |  32|   0|   32|          0|
+    |tmp_reg_343              |   4|   0|   64|         60|
+    |V_In_0_read_reg_348      |  64|  32|   32|          0|
+    |V_In_1_read_reg_358      |  64|  32|   32|          0|
+    |V_In_2_read_reg_368      |  64|  32|   32|          0|
+    |V_In_3_read_reg_378      |  64|  32|   32|          0|
+    |V_In_4_read_reg_388      |  64|  32|   32|          0|
+    |V_In_5_read_reg_398      |  64|  32|   32|          0|
+    |V_In_6_read_reg_408      |  64|  32|   32|          0|
+    |V_In_7_read_reg_418      |  64|  32|   32|          0|
+    |exitcond1_reg_334        |  64|  32|    1|          0|
+    |tmp_reg_343              |  64|  32|   64|         60|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |1523| 320| 1264|        120|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+---------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  | Source Object |    C Type    |
++----------------+-----+-----+------------+---------------+--------------+
+|ap_clk          |  in |    1| ap_ctrl_hs | matrix_vector | return value |
+|ap_rst          |  in |    1| ap_ctrl_hs | matrix_vector | return value |
+|ap_start        |  in |    1| ap_ctrl_hs | matrix_vector | return value |
+|ap_done         | out |    1| ap_ctrl_hs | matrix_vector | return value |
+|ap_idle         | out |    1| ap_ctrl_hs | matrix_vector | return value |
+|ap_ready        | out |    1| ap_ctrl_hs | matrix_vector | return value |
+|M_0_address0    | out |    3|  ap_memory |      M_0      |     array    |
+|M_0_ce0         | out |    1|  ap_memory |      M_0      |     array    |
+|M_0_q0          |  in |   32|  ap_memory |      M_0      |     array    |
+|M_1_address0    | out |    3|  ap_memory |      M_1      |     array    |
+|M_1_ce0         | out |    1|  ap_memory |      M_1      |     array    |
+|M_1_q0          |  in |   32|  ap_memory |      M_1      |     array    |
+|M_2_address0    | out |    3|  ap_memory |      M_2      |     array    |
+|M_2_ce0         | out |    1|  ap_memory |      M_2      |     array    |
+|M_2_q0          |  in |   32|  ap_memory |      M_2      |     array    |
+|M_3_address0    | out |    3|  ap_memory |      M_3      |     array    |
+|M_3_ce0         | out |    1|  ap_memory |      M_3      |     array    |
+|M_3_q0          |  in |   32|  ap_memory |      M_3      |     array    |
+|M_4_address0    | out |    3|  ap_memory |      M_4      |     array    |
+|M_4_ce0         | out |    1|  ap_memory |      M_4      |     array    |
+|M_4_q0          |  in |   32|  ap_memory |      M_4      |     array    |
+|M_5_address0    | out |    3|  ap_memory |      M_5      |     array    |
+|M_5_ce0         | out |    1|  ap_memory |      M_5      |     array    |
+|M_5_q0          |  in |   32|  ap_memory |      M_5      |     array    |
+|M_6_address0    | out |    3|  ap_memory |      M_6      |     array    |
+|M_6_ce0         | out |    1|  ap_memory |      M_6      |     array    |
+|M_6_q0          |  in |   32|  ap_memory |      M_6      |     array    |
+|M_7_address0    | out |    3|  ap_memory |      M_7      |     array    |
+|M_7_ce0         | out |    1|  ap_memory |      M_7      |     array    |
+|M_7_q0          |  in |   32|  ap_memory |      M_7      |     array    |
+|V_In_0          |  in |   32|   ap_none  |     V_In_0    |    pointer   |
+|V_In_1          |  in |   32|   ap_none  |     V_In_1    |    pointer   |
+|V_In_2          |  in |   32|   ap_none  |     V_In_2    |    pointer   |
+|V_In_3          |  in |   32|   ap_none  |     V_In_3    |    pointer   |
+|V_In_4          |  in |   32|   ap_none  |     V_In_4    |    pointer   |
+|V_In_5          |  in |   32|   ap_none  |     V_In_5    |    pointer   |
+|V_In_6          |  in |   32|   ap_none  |     V_In_6    |    pointer   |
+|V_In_7          |  in |   32|   ap_none  |     V_In_7    |    pointer   |
+|V_Out_address0  | out |    3|  ap_memory |     V_Out     |     array    |
+|V_Out_ce0       | out |    1|  ap_memory |     V_Out     |     array    |
+|V_Out_we0       | out |    1|  ap_memory |     V_Out     |     array    |
+|V_Out_d0        | out |   32|  ap_memory |     V_Out     |     array    |
++----------------+-----+-----+------------+---------------+--------------+
+

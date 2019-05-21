@@ -33,12 +33,16 @@ void fir (
   int i;
 #pragma line 70 "/home/ramdas/Work/Learning/CPP_Learning/PP4FPGA_HLS/loop_unrolling_unroll_directive/fir.c"
   TDL:for(i=11 -1;i>0;i=i-1){
-#pragma HLS unroll factor=4
+#pragma HLS unroll
     shift_reg[i] = shift_reg[i-1];
   }
   shift_reg[0] = x;
   acc = 0;
-  MAC:for(i=11 -1;i>=0;i--){
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  MAC:for(i=11 -1;i>=0;i=i-1){
+#pragma HLS unroll
     acc += shift_reg[i]*c[i];
   }
   *y=acc;

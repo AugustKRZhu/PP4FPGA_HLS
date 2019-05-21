@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'fir'
 ================================================================
-* Date:           Wed Nov 28 15:35:08 2018
+* Date:           Thu Nov 29 15:04:04 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        start_prj
@@ -186,9 +186,9 @@ The critical path consists of the following:
  <State 2>: 3.93ns
 The critical path consists of the following:
 	'phi' operation ('i', fir.c:83) with incoming values : ('tmp_6', fir.c:83) [12]  (0 ns)
-	'add' operation ('tmp_4', fir.c:82) [25]  (1.78 ns)
-	'getelementptr' operation ('shift_reg_addr_2', fir.c:82) [27]  (0 ns)
-	'load' operation ('shift_reg_load_1', fir.c:82) on array 'shift_reg' [28]  (2.15 ns)
+	'add' operation ('tmp_1', fir.c:81) [18]  (1.78 ns)
+	'getelementptr' operation ('shift_reg_addr', fir.c:81) [20]  (0 ns)
+	'load' operation ('shift_reg_load', fir.c:81) on array 'shift_reg' [21]  (2.15 ns)
 
  <State 3>: 4.3ns
 The critical path consists of the following:
@@ -208,8 +208,8 @@ The critical path consists of the following:
  <State 6>: 2.15ns
 The critical path consists of the following:
 	'phi' operation ('i') with incoming values : ('i', fir.c:94) [43]  (0 ns)
-	'getelementptr' operation ('shift_reg_addr_4', fir.c:95) [51]  (0 ns)
-	'load' operation ('shift_reg_load_4', fir.c:95) on array 'shift_reg' [52]  (2.15 ns)
+	'getelementptr' operation ('c_addr', fir.c:95) [53]  (0 ns)
+	'load' operation ('c_load', fir.c:95) on array 'c' [54]  (2.15 ns)
 
  <State 7>: 2.15ns
 The critical path consists of the following:

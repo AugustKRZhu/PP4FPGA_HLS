@@ -68,12 +68,16 @@ ALL TIMES.
   //Number of loop cycles reduced by a factor of 3
   //helps because HLS tool synthesizes for loops in a sequential manner for optimal area. this is to take advantage of parallelism
 	 TDL:for(i=N-1;i>0;i=i-1){
-#pragma HLS unroll factor=4
+#pragma HLS unroll
     shift_reg[i] = shift_reg[i-1];
   }
   shift_reg[0] = x;
   acc = 0;
-	 MAC:for(i=N-1;i>=0;i--){
+
+  //unrolling MAC operation
+  //unrolling by a factor of 4
+	 MAC:for(i=N-1;i>=0;i=i-1){
+#pragma HLS unroll
     acc += shift_reg[i]*c[i];
   }
   *y=acc;
